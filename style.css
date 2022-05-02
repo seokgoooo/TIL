@@ -20,7 +20,7 @@ li {
     justify-content: space-between;
     align-items: center;
     background-color: #ddd;
-    padding: 12px 16px;
+    padding: 8px 12px;
 }
 
 .navbar_logo {
@@ -29,7 +29,7 @@ li {
 }
 
 .navbar_logo i {
-    color: darkgoldenrod;
+    color: black;
 }
 
 .navbar_menu {
@@ -39,7 +39,7 @@ li {
 }
 
 .navbar_icons {
-    list-style: none;
-    color: white;
     display: flex;
+    list-style: none;
+    color: goldenrod;
 }
