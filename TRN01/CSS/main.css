@@ -60,7 +60,9 @@
     font-size: 60px;
     font-weight: 900;
     margin: 0 0 30px 0;
-    color: #0dcaf0;
+    background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+    color: transparent;
+    -webkit-background-clip: text;
 }
 
 .main_slider strong {
@@ -87,4 +89,193 @@
 
 .main_slider .slick-dots button {
     display: none;
+}
+
+.gradcircle {
+    background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+}
+
+.main_banner {
+    transform: translateY(-50%);
+}
+
+.main_banner figure {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: white;
+    transition: 0.5s;
+}
+
+.main_banner figure:hover {
+    height: 220px;
+}
+
+.main_banner .container {
+    height: 220px;
+    align-items: flex-end;
+}
+
+.main_banner figure:nth-child(1) {
+    background: rgb(218, 84, 75);
+}
+
+.main_banner figure:nth-child(2) {
+    background: rgb(244, 203, 79);
+}
+
+.main_banner figure:nth-child(3) {
+    background: rgb(51, 118, 137);
+}
+
+.main_banner figure:nth-child(4) {
+    background: rgb(111, 164, 118);
+}
+
+.main_banner figure:nth-child(1) a {
+    background: url(../IMG/icon_set_w.png) no-repeat 0 0;
+}
+
+.main_banner figure:nth-child(2) a {
+    background: url(../IMG/icon_set_w.png) no-repeat -100px 0;
+}
+
+.main_banner figure:nth-child(3) a {
+    background: url(../IMG/icon_set_w.png) no-repeat -200px 0;
+}
+
+.main_banner figure:nth-child(4) a {
+    background: url(../IMG/icon_set_w.png) no-repeat -300px 0;
+}
+
+.main_banner figure a {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 110px;
+    height: 120px;
+    font-size: 13px;
+}
+
+.main_banner .customer {
+    height: 200px;
+    position: relative;
+    flex: 2;
+    background: #ddd;
+    text-align: right;
+    padding: 50px 30px 0 0;
+}
+
+.main_banner .customer a {
+    display: block;
+    margin: 0 0 15px 0;
+    font-size: 38px;
+    background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 700;
+}
+
+.main_banner .customer i {
+    position: absolute;
+    top: -29px;
+    right: -30px;
+    color: white;
+    background-color: rgb(218, 84, 75);
+    font-size: 38px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.main_link {
+    padding: 0 0 100px 0;
+    background: linear-gradient(transparent, #f7f7f7)
+}
+
+
+.main_link .container {
+    gap: 30px;
+}
+
+.main_link figure {
+    position: relative;
+    flex: 1;
+    border-radius: 50px 0 0 0;
+    overflow: hidden;
+}
+
+.main_link figure a {
+    position: absolute;
+    top: 54%;
+    right: 30px;
+    background-color: rgb(244, 203, 79, 0.5);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    border-radius: 50%;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+.main_link figure a:hover {
+    background: rgb(244, 203, 79, 1);
+}
+
+.main_link img {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+.main_link h3 {
+    font-size: 21px;
+    font-weight: 500;
+    /* Noto Sans 폰트는 홀수 px 가 디자인적으로 이쁘다 */
+    margin: 0 0 25px 0;
+}
+
+.main_link p {
+    font-size: 13px;
+}
+
+.main_link h3:after {
+    content: "";
+    /* before, after : 디자인적으로 쓰는 것 (중요한 내용X) 시각장애인들이 못 읽음 */
+    display: block;
+    width: 80px;
+    height: 1px;
+    background: goldenrod;
+    margin: 15px 0;
+}
+
+.footer {
+    border-top: 1px solid #ddd;
+    padding: 50px 0;
+    text-align: center;
+}
+
+address {
+    font-style: normal;
+}
+
+.footer ul {
+    margin: 10px 0;
+}
+
+.footer ul>li {
+    display: inline-block;
+}
+
+.footer ul>li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    background: #ddd;
+    margin: 0 15px;
+    vertical-align: middle;
 }
