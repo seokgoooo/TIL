@@ -49,17 +49,17 @@ li {
 }
 
 .navbar_menu {
-    display: inline-block;
     position: relative;
     list-style: none;
     padding-left: 0;
 }
 
 .menu_dropdown {
-    display: inline-block;
+    display: inline-flex;
+    flex: 1;
+    justify-content: center;
     text-decoration: none;
     width: 250px;
-    text-align: center;
 }
 
 .menu_dropdown:hover {
@@ -70,20 +70,22 @@ li {
     display: none;
     position: absolute;
     width: 250px;
+    top: 65px;
     margin: 0;
     padding: 0;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     background: #333;
     color: #f1f1f1;
     z-index: 1;
 }
 
 .menu_dropdown:hover .dropdown_content {
-    display: block;
+    display: flex;
 }
 
 .dropdown_content:hover {
-    display: inline-block;
+    display: flex;
 }
 
 .navbar_icons {
