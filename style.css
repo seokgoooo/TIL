@@ -24,7 +24,7 @@ li {
 }
 
 .navbar_logo {
-    font-size: 30px;
+    font-size: 29px;
     color: white;
 }
 
@@ -42,4 +42,18 @@ li {
     display: flex;
     list-style: none;
     color: goldenrod;
+}
+
+.navbar_menu .menu00 {
+    display: inline-block;
+    margin: 0 0 0 auto;
+    background: white;
+
+}
+
+.navbar_menu>ul>li>ul {
+    display: inline-block;
+    background-color: aqua;
+    vertical-align: middle;
+
 }
