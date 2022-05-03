@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before & After</title>
+    <style>
+        h2 {
+            text-align: center;
+            margin: 0 0 50px 0;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 80px;
+            height: 1px;
+            background: #f00;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+
+        h2::after {
+            content: "";
+            display: inline-block;
+            width: 80px;
+            height: 1px;
+            background: #f00;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <ul>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+    </ul>
+</body>
+
+</html>
