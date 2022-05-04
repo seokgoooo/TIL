@@ -607,37 +607,31 @@ responsive 768
         vertical-align: middle;
     }
 
-    .mopen {
+    .icon {
+        display: block;
         position: fixed;
         top: 30px;
         right: 30px;
-        width: 30px;
-        height: 30px;
+        font-size: 41px;
+        padding: 10px;
         background: #ddd;
     }
 
-    .mopen span {
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        right: 5px;
-        height: 3px;
-        background: #333;
+    .icon.on {
+        display: none;
     }
 
-    .mopen span:nth-child(1) {
-        top: 5px;
+    .icon01 {
+        display: none;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        font-size: 41px;
+        padding: 10px;
+        background: #ddd;
     }
 
-    .mopen span:nth-child(2) {
-        top: 13px;
-    }
-
-    .mopen span:nth-child(3) {
-        top: 13px;
-    }
-
-    .mopen span:nth-child(4) {
-        top: 21px;
+    .icon01.on {
+        display: block;
     }
 }
