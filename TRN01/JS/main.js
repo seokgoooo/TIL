@@ -11,7 +11,15 @@ $(function () {
         dots: true,
     })
 
-    $('.mopen').on('click', function () {
-        $('.gnb').toggleClass('on')
+    $('.icon').click(function () {
+        $('.gnb').toggleClass('on');
+        $('.icon').toggleClass('on');
+        $('.icon01').toggleClass('on');
     })
-})
+
+    $('.icon01').click(function () {
+        $('.gnb').toggleClass('on');
+        $('.icon').toggleClass('on');
+        $('.icon01').toggleClass('on');
+    })
+});
