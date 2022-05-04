@@ -62,12 +62,12 @@
 }
 
 .main_slider h3 {
-    font-size: 60px;
-    font-weight: 900;
     margin: 0 0 30px 0;
     background: linear-gradient(to right top, #0a96ba, #032777, #333333);
     color: transparent;
     -webkit-background-clip: text;
+    font-size: 60px;
+    font-weight: 900;
 }
 
 .main_slider strong {
@@ -82,9 +82,9 @@
 
 .main_slider .slick-dots li {
     display: inline-block;
-    margin: 0 10px 0 0;
     width: 80px;
     height: 4px;
+    margin: 0 10px 0 0;
     background: #333;
 }
 
@@ -109,11 +109,11 @@
 .main_banner figure {
     display: flex;
     flex: 1;
+    height: 200px;
+    color: white;
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    color: white;
     transition: 0.5s;
 }
 
@@ -160,29 +160,29 @@
 
 .main_banner figure a {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
     width: 110px;
     height: 120px;
+    justify-content: center;
+    align-items: flex-end;
     font-size: 13px;
 }
 
 .main_banner .customer {
-    height: 200px;
     position: relative;
     flex: 2;
+    height: 200px;
+    padding: 50px 30px 0 0;
     background: #ddd;
     text-align: right;
-    padding: 50px 30px 0 0;
 }
 
 .main_banner .customer a {
     display: block;
     margin: 0 0 15px 0;
-    font-size: 38px;
     background: linear-gradient(to right top, #0a96ba, #032777, #333333);
     color: transparent;
     -webkit-background-clip: text;
+    font-size: 38px;
     font-weight: 700;
 }
 
@@ -190,11 +190,11 @@
     position: absolute;
     top: -29px;
     right: -30px;
-    color: white;
-    background-color: rgb(218, 84, 75);
-    font-size: 38px;
     padding: 10px;
     border-radius: 50%;
+    background-color: rgb(218, 84, 75);
+    color: white;
+    font-size: 38px;
 }
 
 /* main_link img & h3 & p & hover & after */
@@ -210,22 +210,22 @@
 
 .main_link figure {
     position: relative;
+    overflow: hidden;
     flex: 1;
     border-radius: 50px 0 0 0;
-    overflow: hidden;
 }
 
 .main_link figure a {
     position: absolute;
     top: 54%;
     right: 30px;
-    background-color: rgb(244, 203, 79, 0.5);
     width: 60px;
     height: 60px;
+    border-radius: 50%;
+    background-color: rgb(244, 203, 79, 0.5);
+    color: #fff;
     text-align: center;
     line-height: 60px;
-    color: #fff;
-    border-radius: 50%;
     text-transform: uppercase;
     transition: 1s;
 }
@@ -240,10 +240,10 @@
 }
 
 .main_link h3 {
+    margin: 0 0 25px 0;
     font-size: 21px;
     font-weight: 500;
     /* Noto Sans 폰트는 홀수 px 가 디자인적으로 이쁘다 */
-    margin: 0 0 25px 0;
 }
 
 .main_link p {
@@ -251,20 +251,20 @@
 }
 
 .main_link h3:after {
-    content: "";
-    /* before, after : 디자인적으로 쓰는 것 (중요한 내용X) 시각장애인들이 못 읽음 */
     display: block;
     width: 80px;
     height: 1px;
-    background: goldenrod;
     margin: 15px 0;
+    background: goldenrod;
+    content: "";
+    /* before, after : 디자인적으로 쓰는 것 (중요한 내용X) 시각장애인들이 못 읽음 */
 }
 
 /* footer 최하단 */
 
 .footer {
-    border-top: 1px solid #ddd;
     padding: 50px 0;
+    border-top: 1px solid #ddd;
     text-align: center;
 }
 
@@ -281,13 +281,13 @@ address {
 }
 
 .footer ul>li~li::before {
-    content: "";
     display: inline-block;
     width: 1px;
     height: 13px;
-    background: #ddd;
     margin: 0 15px;
+    background: #ddd;
     vertical-align: middle;
+    content: "";
 }
 
 
@@ -338,11 +338,11 @@ responsive 768
         position: fixed;
         top: 0;
         left: -100%;
-        background: #fff;
         width: calc(100% - 90px);
         height: 100vh;
         margin: 0 0 0 auto;
         border-right: 1px solid #333;
+        background: #fff;
         z-index: 999;
         transition: 0.5s;
     }
@@ -396,12 +396,12 @@ responsive 768
     }
 
     .main_slider h3 {
-        font-size: 11vw;
-        font-weight: 900;
         margin: 0 0 30px 0;
         background: linear-gradient(to right top, #0a96ba, #032777, #333333);
         color: transparent;
         -webkit-background-clip: text;
+        font-size: 11vw;
+        font-weight: 900;
     }
 
     .main_slider strong {
@@ -417,9 +417,9 @@ responsive 768
 
     .main_slider .slick-dots li {
         display: inline-block;
-        margin: 0 7px 0 0;
         width: 10px;
         height: 10px;
+        margin: 0 7px 0 0;
         background: #333;
     }
 
@@ -444,11 +444,11 @@ responsive 768
     .main_banner figure {
         display: flex;
         flex: 1 1 50%;
+        height: 200px;
+        color: white;
         text-align: center;
         justify-content: center;
         align-items: center;
-        height: 200px;
-        color: white;
         transition: 0.5s;
     }
 
@@ -497,29 +497,29 @@ responsive 768
 
     .main_banner figure a {
         display: flex;
-        align-items: flex-end;
-        justify-content: center;
         width: 110px;
         height: 120px;
         font-size: 13px;
+        align-items: flex-end;
+        justify-content: center;
     }
 
     .main_banner .customer {
-        height: 200px;
         position: relative;
         flex: 2;
+        height: 200px;
+        padding: 50px 30px 0 0;
         background: #ddd;
         text-align: right;
-        padding: 50px 30px 0 0;
     }
 
     .main_banner .customer a {
         display: block;
         margin: 0 0 15px 0;
-        font-size: 38px;
         background: linear-gradient(to right top, #0a96ba, #032777, #333333);
         color: transparent;
         -webkit-background-clip: text;
+        font-size: 38px;
         font-weight: 700;
     }
 
@@ -527,11 +527,11 @@ responsive 768
         position: absolute;
         top: -30px;
         right: 15px;
-        color: white;
-        background-color: rgb(218, 84, 75);
-        font-size: 38px;
         padding: 10px;
         border-radius: 50%;
+        background-color: rgb(218, 84, 75);
+        color: white;
+        font-size: 38px;
     }
 
     /* main_link img & h3 & p & hover & after */
@@ -548,23 +548,23 @@ responsive 768
 
     .main_link figure {
         position: relative;
+        overflow: hidden;
         flex: 1;
         border-radius: 50px 0 0 0;
-        overflow: hidden;
     }
 
     .main_link figure a {
         position: absolute;
         top: 54%;
         right: 30px;
-        background-color: rgb(244, 203, 79, 0.5);
         width: 60px;
         height: 60px;
-        text-align: center;
-        line-height: 60px;
-        color: #fff;
         border-radius: 50%;
+        background-color: rgb(244, 203, 79, 0.5);
+        color: #fff;
+        text-align: center;
         text-transform: uppercase;
+        line-height: 60px;
         transition: 1s;
     }
 
@@ -578,10 +578,10 @@ responsive 768
     }
 
     .main_link h3 {
+        margin: 0 0 25px 0;
         font-size: 21px;
         font-weight: 500;
         /* Noto Sans 폰트는 홀수 px 가 디자인적으로 이쁘다 */
-        margin: 0 0 25px 0;
     }
 
     .main_link p {
@@ -589,20 +589,20 @@ responsive 768
     }
 
     .main_link h3:after {
-        content: "";
-        /* before, after : 디자인적으로 쓰는 것 (중요한 내용X) 시각장애인들이 못 읽음 */
         display: block;
         width: 80px;
         height: 1px;
-        background: goldenrod;
         margin: 15px 0;
+        background: goldenrod;
+        content: "";
+        /* before, after : 디자인적으로 쓰는 것 (중요한 내용X) 시각장애인들이 못 읽음 */
     }
 
     /* footer 최하단 */
 
     .footer {
-        border-top: 1px solid #ddd;
         padding: 50px 0;
+        border-top: 1px solid #ddd;
         text-align: center;
     }
 
@@ -620,13 +620,13 @@ responsive 768
     }
 
     .footer ul>li~li::before {
-        content: "";
         display: none;
         width: 1px;
         height: 13px;
-        background: #ddd;
         margin: 0 15px;
+        background: #ddd;
         vertical-align: middle;
+        content: "";
     }
 
     /* 반응형 Js toggleClass icon */
@@ -636,9 +636,9 @@ responsive 768
         position: fixed;
         top: 30px;
         right: 30px;
-        font-size: 41px;
         padding: 10px;
         background: #ddd;
+        font-size: 41px;
     }
 
     .icon.on {
@@ -650,9 +650,9 @@ responsive 768
         position: fixed;
         top: 30px;
         right: 30px;
-        font-size: 41px;
         padding: 10px;
         background: #ddd;
+        font-size: 41px;
     }
 
     .icon01.on {
