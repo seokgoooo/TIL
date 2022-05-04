@@ -5,6 +5,7 @@
 }
 
 /* 최상단 설명 글 */
+
 .header .top_banner {
     border-bottom: 1px solid #f2f2f2;
     line-height: 40px;
@@ -22,6 +23,7 @@
 }
 
 /* 로고와 메뉴 */
+
 .header .gnb {
     margin: 0 0 0 auto;
 }
@@ -35,7 +37,8 @@
     /* gap은 IE에서 안 먹힌다 */
 }
 
-/* 메인비주얼 배경과 슬로건 */
+/* main_visual background img(center) & slogan & slider(slick) & slick-dots */
+
 .main_visual {
     position: relative;
     height: 600px;
@@ -96,6 +99,8 @@
 .gradcircle {
     background: linear-gradient(to right top, #0a96ba, #032777, #333333);
 }
+
+/* main_banner position & box model & hover & flex-end & background(no-repeat) & linear-gradient & border-radius */
 
 .main_banner {
     transform: translateY(-50%);
@@ -192,6 +197,8 @@
     border-radius: 50%;
 }
 
+/* main_link img & h3 & p & hover & after */
+
 .main_link {
     padding: 0 0 100px 0;
     background: linear-gradient(transparent, #f7f7f7)
@@ -253,6 +260,8 @@
     margin: 15px 0;
 }
 
+/* footer 최하단 */
+
 .footer {
     border-top: 1px solid #ddd;
     padding: 50px 0;
@@ -281,12 +290,16 @@ address {
     vertical-align: middle;
 }
 
+
+
 /*
 
 내가 만듬. 2022. 05. 04
 responsive 768
 
 */
+
+
 
 @media (max-width:768px) {
     .container {
@@ -297,6 +310,7 @@ responsive 768
     }
 
     /* 최상단 설명 글 */
+
     .header .top_banner {
         display: none;
         border-bottom: 1px solid #f2f2f2;
@@ -315,6 +329,7 @@ responsive 768
     }
 
     /* 로고와 메뉴 */
+
     .header h1 {
         padding: 0 15px;
     }
@@ -352,7 +367,8 @@ responsive 768
         left: 0;
     }
 
-    /* 메인비주얼 */
+    /* main_visual background img(center) & slogan & slider(slick) & slick-dots */
+
     .main_visual {
         position: relative;
         height: calc(100vh - 90px);
@@ -418,6 +434,8 @@ responsive 768
     .gradcircle {
         background: linear-gradient(to right top, #0a96ba, #032777, #333333);
     }
+
+    /* main_banner position & box model & hover & flex-end & background(no-repeat) & linear-gradient & border-radius */
 
     .main_banner {
         transform: translateY(0);
@@ -516,6 +534,8 @@ responsive 768
         border-radius: 50%;
     }
 
+    /* main_link img & h3 & p & hover & after */
+
     .main_link {
         padding: 0 0 100px 0;
         background: linear-gradient(transparent, #f7f7f7)
@@ -578,6 +598,8 @@ responsive 768
         margin: 15px 0;
     }
 
+    /* footer 최하단 */
+
     .footer {
         border-top: 1px solid #ddd;
         padding: 50px 0;
@@ -606,6 +628,8 @@ responsive 768
         margin: 0 15px;
         vertical-align: middle;
     }
+
+    /* 반응형 Js toggleClass icon */
 
     .icon {
         display: block;
