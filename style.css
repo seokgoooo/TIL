@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
+:root {
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color: goldenrod;
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -9,12 +15,12 @@
 
 main {
     padding: 8px 10px;
-    background: #ddd;
+    background: #f0f4f5;
 }
 
 footer {
     padding: 10px;
-    background: #f7f7f7;
+    background: var(--background-color);
 }
 
 a {
@@ -36,8 +42,8 @@ li {
     display: flex;
     justify-content: space-between;
     padding: 8px 12px;
-    background: #333;
-    color: #f2f2f2;
+    background: var(--background-color);
+    color: var(--text-color);
     font-size: 19px;
     align-items: center;
 }
@@ -46,12 +52,12 @@ li {
 
 /* 깃허브 아이콘 & 로고 & 제목 */
 .navbar_logo {
-    color: white;
+    color: var(--text-color);
     font-size: 29px;
 }
 
 .navbar_logo i {
-    color: white;
+    color: var(--text-color);
 }
 
 
@@ -73,8 +79,8 @@ li {
 
 .menu_dropdown:hover {
     border-radius: 6px;
-    background: #ddd;
-    color: black;
+    background: var(--text-color);
+    color: var(--background-color);
     font-weight: 700;
 }
 
@@ -85,14 +91,14 @@ li {
     top: 55px;
     padding: 8px 12px;
     border-radius: 6px;
-    background: #333;
-    color: #f1f1f1;
+    background: var(--background-color);
+    color: var(--text-color);
     z-index: 1;
 }
 
 .dropdown_content a {
     display: block;
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 1px solid var(--text-color);
 }
 
 .menu_dropdown:hover .dropdown_content {
@@ -111,7 +117,7 @@ li {
     list-style: none;
     width: 100px;
     padding-left: 0;
-    color: goldenrod;
+    color: var(--accent-color);
 }
 
 .navbar_icons li {
@@ -122,7 +128,7 @@ li {
     display: none;
     position: absolute;
     right: 32px;
-    color: white;
+    color: var(--text-color);
     font-size: 24px;
 }
 
@@ -136,14 +142,8 @@ li {
 
 
 /* 
-
-
-
 made in seokgoooo 2022.04.28 ~
 responsive 768px
-
-
-
  */
 
 
@@ -181,5 +181,10 @@ responsive 768px
 
     .navbar_toggleBtn {
         display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
     }
 }
