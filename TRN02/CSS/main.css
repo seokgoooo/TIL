@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+/* Font는 1개 (많이 쓰면 좋지 않다) */
+
+:root {
+    --blue-color: #0d6efd;
+    --indigo-color: #6610f2;
+    --purple-color: #6f42c1;
+    --pink-color: #d63384;
+    --red-color: #dc3545;
+    --orange-color: #fd7e14;
+    --yellow-color: #ffc107;
+    --green-color: #198754;
+    --teal-color: #20c997;
+    --cyan-color: #0dcaf0;
+    --white-color: #fff;
+    --gray-color: #6c757d;
+    --gray-light-color: #f2f2f2;
+    --gray-dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.top_banner .container {
+    display: block;
+}
+
+.top_banner {
+    padding: 25px 0;
+    background: var(--light-color);
+}
+
+.top_banner h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 31px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.top_banner p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.top_banner a {
+    padding: 2px 15px 4px 15px;
+    margin: 0 0 0 20px;
+    border: 1px solid var(--dark-color);
+}
+
+.top_banner i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background: var(--dark-color);
+    color: var(--light-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header .container {
+    line-height: 100px;
+}
+
+.header .container nav {
+    margin: 0 0 0 auto;
+}
+
+.header .container form {
+    margin: 0 0 0 50px;
+}
+
+.header .container nav>ul {
+    display: flex;
+    /* gap: 40px; = padding: 0 20px;*/
+}
+
+.header .container nav>ul>li~li::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    margin: 0 20px;
+    background: var(--gray-light-color);
+}
+
+#search input {
+    border: none;
+    border-bottom: 1px solid var(--dark-color);
+    outline: none;
+    padding: 5px 0;
+}
+
+#search button {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 30px;
+}
+
+.main_visual figure {
+    height: 600px;
+}
+
+.main_visual .itm01 {
+    background: url(../IMG/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .itm02 {
+    background: url(../IMG/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.main_visual .itm03 {
+    background: url(../IMG/mainvisual03.jpg) no-repeat center center/cover;
+}
