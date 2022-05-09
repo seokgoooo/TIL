@@ -112,6 +112,7 @@ body {
 }
 
 .main_visual figure {
+    position: relative;
     height: 600px;
 }
 
@@ -125,4 +126,111 @@ body {
 
 .main_visual .itm03 {
     background: url(../IMG/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.main_visual .container {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white-color);
+}
+
+.main_visual figure h3 {
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0 0 20px 0;
+    text-shadow: 0 0 2px var(--dark-color);
+}
+
+.main_visual figure.itm02 h3 {
+    color: var(--dark-color);
+    text-shadow: 0 0 2px var(--white-color);
+}
+
+.main_visual figure p {
+    font-size: 13px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+}
+
+.main_visual figure.itm02 p {
+    color: var(--dark-color);
+    text-shadow: 0 0 2px var(--white-color);
+}
+
+.main_visual figure a {
+    display: inline-block;
+    padding: 5px 20px 8px 20px;
+    border: 1px solid var(--white-color);
+    background: var(--dark-color);
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.main_visual figure h3 {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.main_visual figure.on h3 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main_visual figure p {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.main_visual figure.on p {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+
+.main_visual figure a {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.main_visual figure.on a {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 1s;
+}
+
+.main_visual .slick-dots {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_visual .slick-dots li {
+    display: inline-block;
+    width: 80px;
+    height: 5px;
+    margin: 0 5px;
+    background: var(--dark-color);
+}
+
+.main_visual .slick-dots li::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: var(--red-color);
+}
+
+.main_visual .slick-dots li.slick-active::after {
+    width: 100%;
+    transition: 3s;
+}
+
+.main_visual .slick-dots button {
+    display: none;
 }
