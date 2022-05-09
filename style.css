@@ -26,6 +26,7 @@
 * {
     margin: 0;
     padding: 0;
+    color: inherit;
     font-size: inherit;
     font-weight: inherit;
     box-sizing: border-box;
@@ -39,7 +40,6 @@ li {
 }
 
 a {
-    color: inherit;
     text-decoration: none;
 }
 
@@ -62,6 +62,7 @@ button:focus {
     color: var(--white-color);
     font-size: var(--font-large);
     align-items: center;
+    text-align: center;
 }
 
 /* 깃허브 아이콘 & 로고 & 제목 */
@@ -97,8 +98,9 @@ button:focus {
     font-size: var(--font-medium);
 }
 
-.dropdown_content>a {
-    display: inline-flex;
+.navbar .navbar_menu .menu_dropdown .dropdown_content a {
+    display: flex;
+    flex-direction: column;
     border-bottom: 1px solid var(--white-color);
 }
 
@@ -106,9 +108,6 @@ button:focus {
     display: block;
 }
 
-.dropdown_content:hover {
-    display: block;
-}
 
 footer {
     padding: var(--padding);
