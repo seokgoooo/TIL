@@ -69,11 +69,11 @@ strong {
     background: var(--indigo-dark-color);
     font-size: var(--font-large);
     border: 1px solid var(--white-color);
+    margin-bottom: 24px;
 }
 
 img {
     max-width: 100%;
-    vertical-align: middle;
 }
 
 .Wrap {
@@ -81,6 +81,7 @@ img {
 }
 
 main {
+    height: 100vh;
     color: var(--white-color);
 }
 
@@ -143,29 +144,92 @@ main {
 
 /* Main */
 .center {
+    position: relative;
     padding: var(--page-padding) 0;
 }
 
-.container {
+.contents01 {
+    position: absolute;
     display: flex;
-    width: 1200px;
-    margin: 0 auto;
+    width: 800px;
+    padding: var(--padding);
+    font-size: var(--font-medium);
     flex-direction: column;
 }
 
-.ex01 {
-    width: calc(50%);
-    height: 50vh;
+.contents02 {
+    position: absolute;
+    display: flex;
+    width: 800px;
     padding: var(--padding);
-    background: url(/TRN02/IMG/mainvisual01.jpg) no-repeat center center/cover;
+    font-size: var(--font-medium);
+    flex-direction: column;
+}
+
+.contents03 {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    padding: var(--padding);
+    font-size: var(--font-medium);
+    flex-direction: column;
+}
+
+.contents04 {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    padding: var(--padding);
+    font-size: var(--font-medium);
+    flex-direction: column;
+}
+
+.main_slider .contents01 {
+    top: 100px;
+    left: 100px;
+}
+
+.thumbnail01 {
+    display: none;
+}
+
+.contents01:hover .thumbnail01 {
+    display: flex;
+    top: 0;
+    right: 0;
+    transform: scale(1.2);
     z-index: 999;
 }
 
-.ex02 {
-    width: calc(50%);
-    height: 50vh;
-    padding: var(--padding);
-    background: url(/TRN02/IMG/mainvisual02.jpg) no-repeat center center/cover;
+.contents01:hover {
+    flex-direction: column-reverse;
+}
+
+.main_slider .contents02 {
+    top: 200px;
+    right: 100px;
+}
+
+.thumbnail02 {
+    display: none;
+}
+
+.main_slider .contents03 {
+    top: 500px;
+    left: 100px;
+}
+
+.thumbnail03 {
+    display: none;
+}
+
+.main_slider .contents04 {
+    top: 600px;
+    right: 100px;
+}
+
+.thumbnail04 {
+    display: none;
 }
 
 footer {
