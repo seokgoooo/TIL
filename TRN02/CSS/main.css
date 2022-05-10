@@ -20,6 +20,8 @@
     --gray-dark-color: #343a40;
     --light-color: #f8f9fa;
     --dark-color: #212529;
+
+    --page-padding: 100px;
 }
 
 body {
@@ -110,6 +112,8 @@ body {
     background: transparent;
     font-size: 30px;
 }
+
+/* main_visual 메인 슬라이더 / slick-dots */
 
 .main_visual figure {
     position: relative;
@@ -233,4 +237,214 @@ body {
 
 .main_visual .slick-dots button {
     display: none;
+}
+
+/* 옛날 방식으로 중앙 정렬
+.content .container {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+.content .container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.content .container figure {
+    float: left; 
+    width: 33.33333333333%;
+    padding: 0 15px;
+}
+
+.content .container figure img {
+    max-width: 100%;
+}
+
+*/
+
+
+
+/* content / hover / overflow / inline-block */
+.content {
+    padding: var(--page-padding) 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.25em;
+}
+
+section p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.content .container {
+    padding: 0 15px;
+    gap: 30px;
+}
+
+.content .container figure {
+    flex: 1;
+    overflow: hidden;
+}
+
+.content .container figure .case {
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 0.5s 0.5s;
+    margin: 0 0 30px 0;
+}
+
+.content .container figure:hover .case {
+    border-radius: 10px;
+}
+
+.content .container figure img {
+    transition: 0.5s;
+}
+
+.content .container figure:hover img {
+    transform: scale(1.25);
+}
+
+.content .container figure strong {
+    display: block;
+    /* strong은 inline이라 display block을 주면 a가 밑으로 내려간다 */
+    margin: 0 0 20px 0;
+}
+
+.content .container figure a {
+    display: inline-block;
+    padding: 5px 20px 10px 20px;
+    border: 1px solid var(--dark-color);
+}
+
+
+/* index_bg / background fixed / filter */
+
+.index_bg {
+    padding: var(--page-padding) 0;
+    text-align: center;
+    color: var(--white-color);
+    background: url(../IMG/mainvisual03.jpg) no-repeat fixed center center/cover;
+    filter: grayscale(1);
+    /* background-attachment: fixed;       배경 고정 (축약형으로 들어가짐) */
+}
+
+.index_bg span {
+    vertical-align: middle;
+}
+
+.index_bg i {
+    padding: 10px;
+    background: var(--dark-color);
+    margin: 5px 0 0 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+
+
+/* video link 사용법 / play pause button */
+.movie01 {
+    padding: var(--page-padding) 0;
+}
+
+.movie01 .container {
+    gap: 50px;
+}
+
+.movie01 .container figure {
+    flex: 1;
+}
+
+.movie01 .container .dec {
+    flex: 1;
+    padding: var(--page-padding) 0;
+}
+
+.movie01 video {
+    max-width: 100%;
+}
+
+.movie01 .dec i {
+    padding: 10px;
+    margin: 0 5px 0 0;
+    color: var(--white-color);
+    background: var(--dark-color);
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+
+
+/* youtube player (YTPPlayer 사용법) / play pause button */
+
+.movie02 {
+    padding: 150px 0;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.movie02 i {
+    padding: 10px;
+    margin: 0 2px;
+    background: var(--dark-color) 0.5;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* product / 하단 슬라이더 */
+.product {
+    padding: var(--page-padding);
+}
+
+.product .container {
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+}
+
+.product i {
+    padding: 10px;
+    margin: 0 2px;
+    color: var(--white-color);
+    background: var(--dark-color);
+    border-radius: 50%;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+
+/* service / 최하단 /  */
+.service {
+    padding: var(--page-padding);
+    background: var(--gray-light-color);
+}
+
+.service .container>* {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.service .container .tab .tab_menu {
+    display: flex;
+}
+
+.service .container .tab .tab_menu li {
+    flex: 1;
+    text-align: center;
+    line-height: 40px;
+    color: var(--white-color);
+    background: var(--dark-color);
+    border-right: 1px solid var(--white-color);
+    cursor: pointer;
 }
