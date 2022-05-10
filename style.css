@@ -122,10 +122,7 @@ footer {
     display: flex;
     width: 100px;
     padding: var(--padding);
-}
-
-.navbar_icons li {
-    padding: var(--padding);
+    gap: 30px;
 }
 
 .navbar_toggleBtn {
