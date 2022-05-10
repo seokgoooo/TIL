@@ -4,17 +4,29 @@
 :root {
     /* Color */
     --white-color: #ffffff;
-    --black-color: #140a00;
+    --black-color: #212529;
+    --gray-color: #6c757d;
+    --gray-light-color: #f2f2f2;
+    --gray-dark-color: #343a40;
     --indigo-color: #1a237e;
     --indigo-light-color: #534bae;
     --indigo-dark-color: #000051;
-    --red-color: #b71c1c;
+    --red-color: #dc3545;
     --red-light-color: #f05545;
     --red-dark-color: #7f0000;
+    --blue-color: #0d6efd;
+    --purple-color: #6f42c1;
+    --pink-color: #d63384;
+    --orange-color: #fd7e14;
+    --yellow-color: #ffc107;
+    --green-color: #198754;
+    --teal-color: #20c997;
+    --cyan-color: #0dcaf0;
 
     /* Size */
     --margin: ;
     --padding: 12px;
+    --page-padding: 50px;
 
     /* Font Size */
     --font-large: 18px;
@@ -51,7 +63,26 @@ button:focus {
     background: var(--white-color);
 }
 
+strong {
+    padding: var(--padding);
+    color: var(--white-color);
+    background: var(--indigo-dark-color);
+    font-size: var(--font-large);
+    border: 1px solid var(--white-color);
+}
 
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.Wrap {
+    background: var(--indigo-color);
+}
+
+main {
+    color: var(--white-color);
+}
 
 /* 최상단 메뉴 container */
 .navbar {
@@ -109,6 +140,34 @@ button:focus {
 }
 
 
+
+/* Main */
+.center {
+    padding: var(--page-padding) 0;
+}
+
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.ex01 {
+    width: calc(50%);
+    height: 50vh;
+    padding: var(--padding);
+    background: url(/TRN02/IMG/mainvisual01.jpg) no-repeat center center/cover;
+    z-index: 999;
+}
+
+.ex02 {
+    width: calc(50%);
+    height: 50vh;
+    padding: var(--padding);
+    background: url(/TRN02/IMG/mainvisual02.jpg) no-repeat center center/cover;
+}
+
 footer {
     padding: var(--padding);
     background: var(--indigo-light-color);
@@ -134,7 +193,7 @@ footer {
 }
 
 /* 본문 내용 */
-.main li {
+.main ul {
     padding: var(--padding);
     font-size: var(--font-medium);
 }
