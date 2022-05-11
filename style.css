@@ -165,25 +165,9 @@ span:hover {
     background-size: 100% 0%;
 }
 
-.center1 {
+.center {
     background-position: 50% 50%;
     background-size: 0% 0%;
-}
-
-.thumbnail01 {
-    display: none;
-}
-
-.thumbnail02 {
-    display: none;
-}
-
-.thumbnail03 {
-    display: none;
-}
-
-.thumbnail04 {
-    display: none;
 }
 
 main ul {
