@@ -39,6 +39,10 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+li {
+    padding: 10px;
+}
+
 button,
 button:focus {
     border: none;
@@ -49,13 +53,14 @@ button:focus {
 
 main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
     color: var(--white-color);
     background: var(--indigo-color);
+}
+
+hr {
+    margin-bottom: 10px;
 }
 
 /* 최상단 메뉴 container */
@@ -94,7 +99,7 @@ main {
     display: none;
     position: absolute;
     width: 250px;
-    top: 25px;
+    top: 40px;
     padding: var(--padding);
     border-radius: 8px;
     background: var(--indigo-dark-color);
@@ -111,6 +116,7 @@ main {
 
 .menu_dropdown:hover .dropdown_content {
     display: block;
+    z-index: 999;
 }
 
 /* 최상단 메뉴 링크 아이콘(블로그) */
@@ -130,6 +136,47 @@ main {
 }
 
 /* Main 본문 내용 */
+.main_slider {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main_slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 20px 0 0 0;
+}
+
+.main_slider .slick-dots>li {
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    background: var(--white-color);
+    border-radius: 50%;
+}
+
+.main_slider .slick-dots>li.slick-active {
+    background: var(--red-light-color);
+}
+
+.main_slider .slick-dots button {
+    display: none;
+}
+
+.main_slider .box {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    margin: 50px;
+    border: 1px solid var(--white-color);
+}
+
+.main_slider .box .box_name {
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--white-color);
+}
+
 span {
     cursor: pointer;
     -webkit-text-stroke: 1px #f9f7f1;
@@ -138,46 +185,47 @@ span {
     color: transparent;
     background-repeat: no-repeat;
     transition: background-size 0.2s ease-in;
-    font-size: 71px;
+    font-size: 61px;
 }
 
 span:hover {
     background-size: 100% 100%;
+    filter: drop-shadow(0 0 5px #f9f7f1);
 }
 
 .left {
     background-position: 0% 0%;
     background-size: 0% 100%;
+    filter: drop-shadow(0 0 5px var(--red-light-color));
 }
 
 .right {
     background-position: 100% 0%;
     background-size: 0% 100%;
+    filter: drop-shadow(0 0 5px var(--yellow-color));
 }
 
 .top {
     background-position: 0% 0%;
     background-size: 100% 0%;
+    filter: drop-shadow(0 0 5px var(--indigo-light-color));
 }
 
 .bottom {
     background-position: 0% 100%;
     background-size: 100% 0%;
+    filter: drop-shadow(0 0 5px var(--teal-color));
 }
 
 .center {
     background-position: 50% 50%;
     background-size: 0% 0%;
+    filter: drop-shadow(0 0 5px var(--oragne-color));
 }
 
 main ul {
-    padding: var(--page-padding);
     font-size: var(--font-medium);
 }
-
-
-
-
 
 footer {
     padding: var(--padding);
