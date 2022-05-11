@@ -384,7 +384,7 @@ section p {
 
 
 
-/* youtube player (YTPPlayer 사용법) / play pause button */
+/* youtube player (YTPlayer 사용법) / play pause button */
 
 .movie02 {
     padding: 150px 0;
@@ -404,42 +404,119 @@ section p {
 
 /* product / 하단 슬라이더 */
 .product {
-    padding: var(--page-padding);
-}
-
-.product .container {
-    flex: 1;
-    flex-direction: column;
+    position: relative;
+    padding: var(--page-padding) 0;
     text-align: center;
 }
 
+.product .product_slider {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+.product .product_slider figure {
+    padding: 0 15px;
+}
+
 .product i {
-    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
     margin: 0 2px;
     color: var(--white-color);
     background: var(--dark-color);
     border-radius: 50%;
-    font-size: 35px;
+    font-size: 40px;
     cursor: pointer;
 }
 
+.product .s_left {
+    margin: 0 0 0 -700px;
+}
+
+.product .s_right {
+    margin: 0 0 0 700px;
+}
+
+.product .slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 20px 0 0 0;
+}
+
+.product .slick-dots li {
+    width: 10px;
+    height: 10px;
+    background: var(--dark-color);
+    border-radius: 50%;
+}
+
+.product .slick-dots li.slick-active {
+    background: var(--red-color);
+}
+
+.product .slick-dots button {
+    display: none;
+}
+
+.product .box {
+    margin: 0 0 20px 0;
+}
+
+.product figure img {
+    padding: 20px 0;
+    transition: 0.5s;
+}
+
+.product figure.slick-center img {
+    transform: scale(1.25);
+}
+
+.product small {
+    position: relative;
+    display: inline-block;
+    border-top: 30px solid var(--pink-color);
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid var(--pink-color);
+    border-left: 100px solid var(--pink-color);
+    top: 25px;
+    left: -600px;
+}
+
+.product span {
+    position: absolute;
+    top: -10px;
+    left: -80px;
+    color: var(--white-color);
+}
 
 /* service / 최하단 /  */
 .service {
-    padding: var(--page-padding);
+    padding: var(--page-padding) 0;
     background: var(--gray-light-color);
 }
 
-.service .container>* {
+.service .container {
+    gap: 40px;
+}
+
+.service .tab_Wrap {
     flex: 1;
     padding: 0 15px;
 }
 
-.service .container .tab .tab_menu {
+.service figure {
+    flex: 1;
+}
+
+.service .tab_Wrap .tab_menu {
     display: flex;
 }
 
-.service .container .tab .tab_menu li {
+.service .tab_Wrap .tab_menu>li {
     flex: 1;
     text-align: center;
     line-height: 40px;
@@ -447,4 +524,90 @@ section p {
     background: var(--dark-color);
     border-right: 1px solid var(--white-color);
     cursor: pointer;
+}
+
+.service .tab_Wrap .tab_menu>li.on {
+    background: var(--pink-color);
+}
+
+.service .tab_Wrap .tab_content>li {
+    display: none;
+}
+
+.service .tab_Wrap .tab_content>li.on {
+    display: block;
+}
+
+.service .tab_Wrap .tab_content>li dd {
+    display: flex;
+    justify-content: space-between;
+    line-height: 36px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.service .tab_Wrap .tab_content>li dd strong {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+
+
+/* footer */
+.footer {
+    padding: 0 0 50px 0;
+    background: var(--dark-color);
+    color: var(--white-color);
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.footer hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid var(--gray-dark-color);
+}
+
+.footer .container {
+    justify-content: space-between;
+    line-height: 60px;
+}
+
+.footer .footer_top ul {
+    display: flex;
+}
+
+.footer .footer_top ul li~li::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 15px;
+    background: var(--gray-color);
+    vertical-align: middle;
+}
+
+.footer .footer_top .sns {
+    font-size: 0;
+    /* 간격 없애는 방법 */
+    /* 자식 태그들 사이 떨어져있을 때 부모 태그에 fontsize를 0으로 주면 붙는다 */
+}
+
+.footer .footer_top i {
+    padding: 10px;
+    color: var(--gray-color);
+    font-size: 21px;
+    margin: auto 2px;
+    vertical-align: middle;
+}
+
+.footer #link {
+    padding: 5px 15px;
+    border: none;
+    /* outline: none; */
+    background: var(--gray-dark-color);
+    color: var(--white-color);
+    font-size: 15px;
+    text-transform: uppercase;
 }

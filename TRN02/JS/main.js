@@ -34,7 +34,7 @@ $(function () {
         startAt: 0,
         opacity: 1,
         showControls: false,
-    });
+    })
 
     $('.movie02 i:nth-of-type(1)').on('click', function () {
         $('#bgndVideo').YTPPlay();
@@ -42,6 +42,34 @@ $(function () {
 
     $('.movie02 i:nth-of-type(2)').on('click', function () {
         $('#bgndVideo').YTPPause();
+    })
+
+    $('.product_slider').slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        dots: true,
+        slidesToShow: 5,
+        centerMode: true,
+    })
+
+    $('.product .s_left').on('click', function () {
+        $('.product_slider').slick('slickPrev');
+    })
+
+    $('.product .s_right').on('click', function () {
+        $('.product_slider').slick('slickNext');
+    })
+
+    $('.tab_menu>li').on('click', function () {
+        var idx = $(this).index();
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.tab_content>li').addClass('on').siblings().removeClass('on');
+    })
+
+    $('.footer #link').on('change', function () {
+        var lik = $(this).val();
+        if (lik) window.open(lik);
     })
     ///////////////////////////////////////////
 })
