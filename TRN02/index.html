@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/slick.css">
     <link rel="stylesheet" href="CSS/jquery.mb.YTPlayer.min.css">
+    <link rel="stylesheet" href="CSS/hamburgers.min.css">
     <link rel="stylesheet" href="CSS/main.css">
 </head>
 
@@ -23,6 +24,7 @@
                 <i class="xi-close"></i>
             </div>
         </div>
+
         <header class="header">
             <!-- header class를 주는 이유는 하위버전 (IE)에서 안먹힐 경우를 대비하기 위함
                 옛날 방식의 잔재이다. -->
@@ -42,6 +44,12 @@
                         <li><a href="#">특별한 솔리테어</a></li>
                     </ul>
                 </nav>
+
+                <button class="hamburger mbtn hamburger--spin" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
 
                 <div class="search">
                     <form id="search" name="search_form" action="javascript:formSubmit()">
@@ -129,7 +137,7 @@
             <section class="movie01">
                 <div class="container">
                     <figure>
-                        <video src="IMG/movie.mp4" muted autoplay loop></video>
+                        <video src="IMG/movie.mp4" muted autoplay loop playsinline></video>
                     </figure>
                     <div class="dec">
                         <h2>JEWELRY COLLECTION</h2>
@@ -240,12 +248,12 @@
         <footer class="footer">
             <div class="footer_top container">
                 <ul>
-                    <li><a href="">이용약관</a></li>
-                    <li><a href="">문의하기</a></li>
-                    <li><a href="">개인정보 취급방침</a></li>
-                    <li><a href="">방문 예약하기</a></li>
-                    <li><a href="">사이즈 가이드</a></li>
-                    <li><a href="">그라프 하우스 소개</a></li>
+                    <li><a href="#!">이용약관</a></li>
+                    <li><a href="#!">문의하기</a></li>
+                    <li><a href="#!">개인정보 취급방침</a></li>
+                    <li><a href="#!">방문 예약하기</a></li>
+                    <li><a href="#!">사이즈 가이드</a></li>
+                    <li><a href="#!">그라프 하우스 소개</a></li>
                 </ul>
                 <div class="sns">
                     <a href="#!"><i class="xi-instagram"></i></a>
@@ -272,11 +280,8 @@
                 </div>
             </adress>
 
-
         </footer>
-        <div class="mopen">
 
-        </div>
     </div>
 
     <script src="JS/jquery-1.12.4.min.js"></script>
