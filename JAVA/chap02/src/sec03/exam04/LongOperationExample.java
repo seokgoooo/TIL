@@ -9,3 +9,4 @@ public class LongOperationExample {
 		System.out.println(result);
 	}
 }
+
