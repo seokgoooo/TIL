@@ -14,5 +14,8 @@ public class Page101Two {
 		int mar = y % x;
 		
 		System.out.println(y + "을 " + x + "으로 나눈 몫은 " + div + "이고 나머지는 " + mar + "입니다.");
+		
+		System.out.printf("%d을 %d으로 나눈 몫은 %d이고 나머지는 %d입니다.", y, x, div, mar);
+		// printf : %d 등 서식 사용할 수 있음
 	}
 }
