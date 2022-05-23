@@ -3,24 +3,18 @@ import java.util.Scanner;
 public class Question4 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("n개의 정수 입력.");
+		System.out.print("몇가지의 정수인가요?: ");
 		int total = sc.nextInt();
-			
-		int x = 0;
-		int y;
+		int numcount = 0;
+		
 		for (int i = 0; i < total; i++) {
-			System.out.println("정수 입력.");
-			int count = sc.nextInt();
-			
-			if (count % 2 == 0) {
-				y = count;
-			System.out.println(y);
-				x++;
-			}
-			else {
-				x++;
+			System.out.println(total + "개의 정수 입력");
+			int num = sc.nextInt();
+			if (num % 2 == 0) {
+				System.out.println("짝수: " + num);
+				numcount++;
 			}
 		}
-		System.out.println("짝수 개수 " + x);
+		System.out.println("짝수 총 개수: " + numcount);
 	}
 }
