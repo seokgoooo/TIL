@@ -1,0 +1,16 @@
+public class TestMethod4 {
+	// 정수 하나를 전달받아 1 ~ 100 사이의 수이면 true을 반환하고, 그렇지 않으면 false를 반환하는 메소드 작성.
+	public static boolean numTf(int i) {
+		
+		if (i >= 1 && i <= 100) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	public static void main(String[] args) {
+		System.out.println(numTf(300));
+		System.out.println(numTf(30));
+		System.out.println(numTf(-30));
+	}
+}
