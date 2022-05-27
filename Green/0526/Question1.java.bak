@@ -11,7 +11,6 @@ public class Question1 {
 	}
 	
 	public static void main(String[] args) {
-		
 		double r = 0;
 		System.out.println("원의 넓이는 : " + area(r));
 	}
