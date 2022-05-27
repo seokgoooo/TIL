@@ -1,6 +1,7 @@
 # seokgoooo.github.io
 https://d2.naver.com/news/3435170
 
+CS // 알고리즘 // JAVA // 스프링 // 코틀린 // 
 연산자
 조건문 반복문
 참조 타입
@@ -10,5 +11,3 @@ https://d2.naver.com/news/3435170
 중첩 클래스 / 중첩 인터페이스
 예외 처리
 기본 API 클래스
-<>
-CS // 알고리즘 // JAVA // 스프링 // 코틀린 // 
