@@ -4,7 +4,7 @@ public class Star5 {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 
-		for (int i = n; i >= 0; i--) {
+		for (int i = n; i >= 1; i--) {
 			
 			for (int j = n; j > i; j--) {
 			
@@ -29,3 +29,9 @@ public class Star5 {
 		}
 	}
 }
+
+// *********
+ // *******
+  // *****
+   // ***
+    // *
