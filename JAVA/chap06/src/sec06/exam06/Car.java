@@ -25,6 +25,8 @@ public class Car {
 	}
 	public void setStop(boolean stop) {
 		this.stop = stop;
+//		if(stop) {
 		this.speed = 0;
+//		}
 	}
 }
