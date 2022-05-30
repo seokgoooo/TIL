@@ -1,0 +1,4 @@
+public class StudentTest {
+	String name;
+	int kor, eng, math;
+}
