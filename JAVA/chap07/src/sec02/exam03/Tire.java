@@ -17,8 +17,10 @@ public class Tire {
 		++accumulatedRotation;		// 누적 회전수 1 증가
 		if (accumulatedRotation < maxRotation) {		// 정상 회전(누적<최대)일 경우 실행
 			System.out.println(location + " Tire 수명: " + (maxRotation - accumulatedRotation) + "회");
+			return true;
 		} else {
 			System.out.println("*** " + location + " Tire 펑크 ***"); // 펑크(누적=최대)일 경우 실행
+			return false;
 		}
 	}
 }
