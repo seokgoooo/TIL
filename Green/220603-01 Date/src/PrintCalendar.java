@@ -53,8 +53,8 @@ public class PrintCalendar {
 		int end = now.getActualMaximum(Calendar.DAY_OF_MONTH); 	//해당 월 마지막 날짜
 		int dayOfWeek = now.get(Calendar.DAY_OF_WEEK); 			//해당 날짜의 요일(1:일요일 … 7:토요일)
 		
-		for (int i = 1; i <= end; i++) {
-			if (i == 1) {
+		for (int i = 1; i <= end; i++) {		// 날짜만 1부터 월 마지막 날짜까지 출력
+			if (i == 1) {				// 1일의 요일을 얻어서 그 요일 전까지 공백을 출력해 시작 요일을 맞춰줌
 				for (int j = 1; j < dayOfWeek; j++) {
 					System.out.print("    ");
 				}
