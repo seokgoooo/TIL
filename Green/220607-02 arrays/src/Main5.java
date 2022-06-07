@@ -38,7 +38,7 @@ public class Main5 {
 			i++;
 		}
 		
-		for (int j = stop - 5; j < stop; j++) {		// 0 이하의 정수가 입력 되기 이전 5개의 index 값을 출력
+		for (int j = stop - 5; j < stop; j++) {		// 0 이하의 정수가 입력 되기 이전 5개의 배열 값을 출력
 			if (j >= 0)
 				System.out.print(zero[j] + " ");
 		}				
