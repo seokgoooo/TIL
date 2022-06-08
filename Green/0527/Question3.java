@@ -14,14 +14,35 @@ class Movie {
 		System.out.println(director);
 		System.out.println(year);
 	}
+	
+	public Movie(String t, double s, String d, int p) {
+		// 필드 초기화 << 주 목적
+		title = t;
+		score = s;
+		director = d;
+		year = p;
+	}
 }
 public class Question3 {
 	public static void main(String[] args) {
-		Movie printMovie = new Movie();
-		printMovie.title = "기생충";
-		printMovie.score = 7.9;
-		printMovie.director = "봉준호";
-		printMovie.year = 2019;
-		printMovie.printAll();
+		// 생성자(constructor)
+		// 기본 생성자
+		// 기본값으로 초기화
+		// 정수형 -> 0
+		// 실수형 -> 0.0
+		// 논리형 -> false
+		// 참조형 -> null
+		Movie m = new Movie("새영화", 7.5, "새감독", 2022);
+		System.out.println(m.title);
+		System.out.println(m.score);
+		System.out.println(m.year);
+		
+		
+		// Movie printMovie = new Movie();
+		// printMovie.title = "기생충";
+		// printMovie.score = 7.9;
+		// printMovie.director = "봉준호";
+		// printMovie.year = 2019;
+		// printMovie.printAll();
 	}
 }
