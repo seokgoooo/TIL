@@ -94,15 +94,15 @@ public class Q13015 {
 			for (int j = 1; j < n; j++) {
 				if (j == i) {
 					System.out.print("*");
-					
 				} else {
 					System.out.print(" ");
 				}		
             }
 			
-			for (int j = 1; j <= i; j++) {
+			for (int j = 1; j <= n; j++) {
 				if (j == i) {
 					System.out.print("*");
+					continue;
 				} else {
 					System.out.print(" ");
 				}		
