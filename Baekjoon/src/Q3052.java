@@ -6,7 +6,6 @@ public class Q3052 {
 
 		int[] input = new int[10];
 		int[] result = new int[10];
-		int indexNumber = 0;
 		int count = 0;
 
 		for (int i = 0; i < input.length; i++) {
@@ -14,22 +13,18 @@ public class Q3052 {
 			result[i] = input[i] % 42;
 		}
 
-		while (indexNumber < result.length) {
-			for (int i = 0; i < result.length; i++) {
-				if (result[indexNumber] == result[i]) {
-					if (indexNumber == i) {
-						continue;
-					} else {
+		for (int i = 0; i < result.length; i++) {
+			for (int j = 0; j < result.length; j++) {
+				if (i != j) {
+					if (result[i] == result[j]) {
 						count++;
-						break;
+					} else {
+						continue;
 					}
-				} else if (result[indexNumber] != result[i]) {
-
 				}
 			}
-			indexNumber++;
 		}
 
-		System.out.println(10 - count);
+		System.out.println(count);
 	}
 }
