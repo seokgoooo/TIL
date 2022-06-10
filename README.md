@@ -1,6 +1,8 @@
 # seokgoooo.github.io
 https://d2.naver.com/news/3435170
 
+https://nanalike.notion.site/35e0e234d27948afba77f062939f7491?v=2cb39e3c4fdc4fcaa0c00383ca7abdb4
+
 CS // 알고리즘 // JAVA // 스프링 // 코틀린 // 
 연산자
 조건문 반복문
