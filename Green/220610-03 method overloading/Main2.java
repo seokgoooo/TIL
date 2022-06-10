@@ -59,20 +59,20 @@ public class Main2 {
 	}
 
 	public static void main(String[] args) {
-		Main2 drink = new Main2();
-		Can one = drink.choice(1);
+		Main2 drinkMachine = new Main2();
+		Can one = drinkMachine.choice(1);
 		System.out.println(one.toString());
 
-		Can two = drink.choice(2);
+		Can two = drinkMachine.choice(2);
 		System.out.println(two.toString());
 
-		Can three = drink.choice(3);
+		Can three = drinkMachine.choice(3);
 		System.out.println(three.toString());
 
-		Can str = drink.choice("Cola");
+		Can str = drinkMachine.choice("Cola");
 		System.out.println(str.toString());
 
-		Can zero = drink.choice(0);
+		Can zero = drinkMachine.choice(0);
 		System.out.println(zero.toString());
 	}
 }
