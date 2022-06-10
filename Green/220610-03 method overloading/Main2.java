@@ -8,11 +8,6 @@ class Can {
 	public String toString() {
 		return name;
 	}
-
-	public void cola(int i) {
-		// TODO Auto-generated method stub
-		
-	}
 }
 
 public class Main2 {
@@ -23,37 +18,61 @@ public class Main2 {
 
 	// 문자열 -> 반환Type : Can
 	// "Cola" -> field "콜라"
+
 	public final int COLA = 1;
 	public final int SPRITE = 2;
 	public final int FANTA = 3;
-	
-	public Can cola(int input) {
-		if (input == 1) {
-			System.out.println("콜라객체");
+
+	public Can choice(int input) {
+		if (input == COLA) {
+			System.out.println("---------------");
+			System.out.println("콜라객체 생성");
 			return new Can("콜라");
 		}
-
-		if (input == 2) {
-			System.out.println("사이다객체");
+		if (input == SPRITE) {
+			System.out.println("---------------");
+			System.out.println("사이다객체 생성");
 			return new Can("사이다");
+		}
+		if (input == FANTA) {
+			System.out.println("---------------");
+			System.out.println("환타객체 생성");
+			return new Can("환타");
 		} else {
-			return null;
+			System.out.println("---------------");
+			System.out.println("빈 객체 생성");
+			System.out.print("---------------");
+			return new Can("");
 		}
 	}
 
-	public Can cola(String input) {
+	public Can choice(String input) {
+		String name;
 		if (input.equals("Cola")) {
-			System.out.println("콜라객체");
-			return new Can("콜라");
+			System.out.println("---------------");
+			System.out.println("콜라객체 생성");
+			name = "콜라";
 		} else {
-			return null;
+			return new Can("");
 		}
+		return new Can(name);
 	}
 
 	public static void main(String[] args) {
-		Main2 one = new Main2();
-		one.cola(1);
-		one.cola(2);
-		one.cola("Cola");
+		Main2 drink = new Main2();
+		Can one = drink.choice(1);
+		System.out.println(one.toString());
+
+		Can two = drink.choice(2);
+		System.out.println(two.toString());
+
+		Can three = drink.choice(3);
+		System.out.println(three.toString());
+
+		Can str = drink.choice("Cola");
+		System.out.println(str.toString());
+
+		Can zero = drink.choice(0);
+		System.out.println(zero.toString());
 	}
 }
