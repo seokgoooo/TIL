@@ -1,0 +1,33 @@
+.nepo {
+    display: block;
+    position: fixed;
+    color: red;
+    font-size: 30px;
+    padding: 10px;
+    background: #d00;
+    top: 30px;
+    right: 30px;
+}
+
+.mopen {
+    display: none;
+    position: fixed;
+    color: darkgoldenrod;
+    font-size: 30px;
+    padding: 10px;
+    background: #ddd;
+    top: 30px;
+    right: 30px;
+}
+
+@media (max-width:768px) {
+
+    .nepo {
+        display: none;
+    }
+
+    .mopen {
+        display: block;
+    }
+
+}

@@ -1,0 +1,993 @@
+<!-- html 문서 단축키   느낌표 + 탭 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB</title>
+    <link rel="stylesheet" href="/TIL/WEB/Green/TRN01/CSS/reset.css">
+    <style>
+        /* style 주석 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .pt01 {
+            width: 500px;
+            padding: 50px;
+            color: white;
+            background: #f00;
+            border: 1px solid #000;
+        }
+
+        .pt011 {
+            width: 500px;
+            background: #ff0;
+        }
+
+        /* 박스 모델 가로 놓기와 가운데 정렬 세로 축은 자동으로 된다 */
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+            background: red;
+            text-align: center;
+        }
+
+        .container .pt02 {
+            flex: 1;
+            color: #369;
+        }
+
+        /* 박스 모델 겹쳐놓기 (z축) */
+        .pt03 {
+            padding: 100px 0;
+            background: #ddd;
+            text-align: center;
+        }
+
+        .pt03 h2 {
+            font-size: 30px;
+            margin: 0 0 20px 0;
+        }
+
+        .pt03 p {
+            font-size: 15px;
+            margin: 0 0 30px 0;
+        }
+
+        .pt03>.container {
+            gap: 30px;
+            overflow: hidden;
+        }
+
+        .pt03>.container span {
+            position: absolute;
+            top: 500px;
+            left: 300px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            color: #fff;
+            background: darkolivegreen;
+            border-radius: 50%;
+            transition: 1s;
+            z-index: 999;
+        }
+
+        .pt03>.container:hover span {
+            border-radius: 0;
+            left: 500px;
+        }
+
+        .pt03>.container figure img {
+            transition: 0.5s;
+        }
+
+        .pt03>.container figure img:hover {
+            transform: scale(2);
+        }
+
+        .pt03>.mopen {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: #333;
+            width: 100px;
+            height: 100px;
+            z-index: 999;
+        }
+
+        .pt03>.mopen>span {
+            position: absolute;
+            left: 20px;
+            width: 60px;
+            height: 5px;
+            background: #fff;
+            transition: 0.5s;
+            z-index: 999;
+        }
+
+        .pt03>.mopen>span:nth-child(1) {
+            top: 20px;
+        }
+
+        .pt03>.mopen>span:nth-child(2) {
+            top: 40px;
+        }
+
+        .pt03>.mopen>span:nth-child(3) {
+            top: 40px;
+        }
+
+        .pt03>.mopen>span:nth-child(4) {
+            top: 60px;
+        }
+
+        .pt03>.mopen.oo>span:nth-child(1) {
+            display: none;
+        }
+
+        .pt03>.mopen.oo>span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .pt03>.mopen.oo>span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .pt03>.mopen.oo>span:nth-child(4) {
+            display: none;
+        }
+
+        .pt04 {
+            height: 500px;
+            background: url(/TRN01/IMG/main_slider01.jpg) no-repeat center top/cover;
+        }
+
+        .pt05>h2 {
+            text-align: center;
+            margin: 0 0 50px 0;
+        }
+
+        .pt05>h2::before {
+            content: "";
+            display: inline-block;
+            width: 80px;
+            height: 1px;
+            background: #f00;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+
+        .pt05>h2::after {
+            content: "";
+            display: inline-block;
+            width: 80px;
+            height: 1px;
+            background: #f00;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+
+        .pt06 {
+            font-size: 50px;
+            background: #333;
+        }
+
+        .pt06>.responsive {
+            background: red;
+        }
+
+        .pt06>.responsive span {
+            display: none;
+        }
+
+        .pt06>.res02 {
+            display: flex;
+            gap: 20px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pt06>.res02 figure {
+            flex: 1;
+            background: #ddd;
+        }
+
+        .pt06>nav {
+            background: gold;
+        }
+
+        .pt06>nav>ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            line-height: 40px;
+        }
+
+        .pt06>nav>ul a {
+            display: block;
+            padding: 0 15px;
+            color: aqua;
+        }
+
+        .pt06>.mopen06 {
+            display: none;
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            width: 30px;
+            height: 30px;
+            background: greenyellow;
+            text-align: center;
+            line-height: 30px;
+            z-index: 1000;
+        }
+
+        .pt06>.mopen06::before {
+            content: 'O';
+            z-index: 1000;
+        }
+
+        .pt06>.mopen06.on::before {
+            content: 'X';
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .pt06>.responsive {
+                background: yellow;
+            }
+
+            .pt06>.responsive span {
+                display: block;
+            }
+
+            .pt06>.res02 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: auto;
+                margin: 0 auto;
+            }
+
+            .pt06>.res02 figure {
+                flex: 1;
+                background: blue;
+            }
+
+            .pt06>nav {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                background: white;
+                width: calc(100% - 90px);
+                /* vh는 뷰포트 높이 100vh 는 높이 꽉 차게 하는 단위 */
+                height: 100vh;
+                padding: 50px 15px;
+                transition: 0.5s;
+            }
+
+            .pt06>nav.on {
+                left: 0;
+            }
+
+            .pt06>nav>ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                list-style: none;
+                line-height: 40px;
+            }
+
+            .pt06>nav>ul a {
+                display: block;
+                padding: 0 15px;
+                color: #333;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .pt06>.mopen06 {
+                display: block;
+            }
+        }
+
+        /* 나중에 나온 position은 덮어쓴다 (주의) */
+
+        .pt07 {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        .pt07>a {
+            text-decoration: none;
+        }
+
+        .pt07>ul {
+            list-style: none;
+        }
+
+        .pt07>h1 {
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+        }
+
+        /* menu01~05 바탕 메뉴 bar*/
+        .pt07>nav {
+            position: relative;
+            border-top: 10px solid #ddd;
+            border-bottom: 10px solid #ddd;
+            z-index: 999;
+        }
+
+        /* menu01~05 내용 들어가는 list */
+        .pt07>nav>ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            text-align: center;
+        }
+
+        /* menu01. 02. 03 등 각각의 칸 */
+        .pt07>nav>ul>li {
+            position: relative;
+            line-height: 40px;
+        }
+
+        /* 다단 메뉴 (밑에 나오는 메뉴) */
+        .pt07>nav>ul>li ul {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            background: #ff0;
+            z-index: 999;
+        }
+
+        .pt07>nav:hover>ul>li ul {
+            height: 120px;
+        }
+
+        .pt07>nav::before {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 0;
+            background: #ff0;
+            transition: 0.5s;
+        }
+
+        .pt07>nav:hover:before {
+            height: 120px;
+        }
+
+        .pt07>.visual {
+            position: relative;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 500px;
+        }
+
+        .pt07>.hover01:hover a {
+            background: #534bae;
+        }
+
+        .pt07>.hover01>ul {
+            display: none;
+        }
+
+        .pt07>.hover01:hover>ul {
+            display: block;
+        }
+
+        /* 
+        transform: translate(-50%, -50%);
+        팝업 공식 top left transform opacity: 0;
+        투명하지만 내용은 있게 만듬 visibility: hidden;
+        공간은 놔두고 기능은 다 없앤다 
+        
+        before & after 는 *로 설정이 안먹혀서 따로따로 설정을 해줘야한다 */
+
+        .pt08>img {
+            max-width: 100%;
+        }
+
+        .pt08>section h2 {
+            font-size: 21px;
+            font-weight: 500;
+            margin: 0 0 30px 0;
+        }
+
+        .pt08>section h2::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 60px;
+            background: #f00;
+            margin: 20px auto;
+        }
+
+        .pt08>section p {
+            font-size: 15px;
+            font-weight: 300;
+            margin: 0 0 30px 0;
+        }
+
+        .pt08>section {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .pt08>section .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        .pt08>.content figure .inbox {
+            overflow: hidden;
+        }
+
+        .pt08>.content figure img {
+            transition: 1s;
+        }
+
+        .pt08>.content figure:hover img {
+            transform: scale(2);
+            transition: 0.5s;
+        }
+
+        .pt08>.con02 figure {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pt08>.con02 figure a {
+            position: absolute;
+            right: 0;
+            bottom: -38px;
+            transition: 0.5s;
+            border: 1px solid #333;
+            background: rgba(211, 73, 193, 0.822);
+            padding: 10px;
+            border-radius: 100%;
+        }
+
+        .pt08>.con02 figure:hover a {
+            bottom: 0;
+        }
+
+        .pt08>.con03 .inbox {
+            position: relative;
+        }
+
+        .pt08>.con03 .inbox:hover::before {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+
+        .pt08>.con03 .inbox:hover::after {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+
+        .pt08>.con03 .inbox::before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            background: rgba(219, 7, 7, 0.25);
+            border-top: 1px solid #333;
+            border-left: 1px solid #333;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .pt08>.con03 .inbox::after {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            background: rgba(219, 7, 7, 0.25);
+            border-bottom: 1px solid #333;
+            border-right: 1px solid #333;
+            transition: 0.5s 0.5s;
+            opacity: 0;
+        }
+
+        .pt09 .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 400px;
+            background: #c30000;
+            z-index: 200;
+        }
+
+        .pt09 .popup button {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+        }
+
+        .pt09 .popup02 {
+            position: fixed;
+            top: 30%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 400px;
+            background: #25acac;
+            z-index: 300;
+        }
+
+        .pt09 .popup03 {
+            position: fixed;
+            top: 70%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 400px;
+            background: #adda46;
+            z-index: 100;
+        }
+
+        .pt09 section {
+            background: #6a1f81;
+            height: 300vh;
+        }
+
+        .pt09 .top_banner .container09 {
+            background: #ff0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vh;
+            height: 10vh;
+            z-index: 1;
+        }
+
+        .pt09 .top_banner button {
+            position: absolute;
+            top: 50px;
+            right: 150px;
+            z-index: 999;
+        }
+
+        .pt09 .top_banner button.on {
+            transform: rotate(180deg);
+        }
+
+        .pt09 .side_banner {
+            position: fixed;
+            /* position : fixed = scroll bar 사라짐 */
+            width: 350px;
+            height: 400px;
+            right: -300px;
+            top: 300px;
+            background: #13a106;
+            transition: 0.5s;
+        }
+
+        .pt09 .side_banner.on {
+            right: 0;
+        }
+
+        .pt09 .side_banner button {
+            display: block;
+            z-index: 999;
+            transition: 0.5s;
+        }
+
+        .pt09 .side_banner.on button {
+            transform: rotate(180deg);
+        }
+
+        .pt09 .totop {
+            display: none;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            padding: 20px;
+            color: #fff;
+            background: #333;
+            font-size: 31px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 주석 : 박스모델    주석 단축키 : 컨트롤 + 슬래시-->
+
+    <header>
+
+    </header>
+
+    <main>
+        <section class="part01">
+            <div class="pt01">
+                part 01
+            </div>
+            <div class="pt011">
+                part 01
+            </div>
+        </section>
+
+        <br>
+
+        <section class="pt02">
+            <div class="container">
+                <div class="pt02">part 001</div>
+                <div class="pt02">part 002</div>
+                <div class="pt02">part 003</div>
+                <div class="pt02">part 004</div>
+            </div>
+
+            <div>part 004</div>
+        </section>
+
+        <br>
+
+        <section class="pt03">
+
+            <h2>Part 03</h2>
+            <p> amet consectetur, adipisicing elit.<br> Quaerat itaque, doloremque laboriosam qui autinventore tempora
+                commodianimi<br>
+                beatae temporibus amet quasi numquam eius quisquam! Atque sequi velit dicta
+                expedita.</p>
+
+            <div class="container">
+                <figure>
+                    <img src="m01.jpg" alt="">
+                    <span>003</span>
+                    <!-- span은 박스가 아니다 width height 적용이 안됨
+                    글자에 관여하는 것들 (인라인 요소)
+                    좌, 우 margin / padding 은 적용 가능
+                    position을 먹이면 box 속성 적용 가능-->
+                </figure>
+                <figure>
+                    <img src="m01.jpg" alt="">
+                </figure>
+                <figure>
+                    <img src="m01.jpg" alt="">
+                </figure>
+            </div>
+
+            <div class="mopen">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <br>
+
+        <section class="pt04">
+            <span>part 04</span>
+        </section>
+
+        <br>
+
+        <section class="pt05">
+            <h2>part 05 before &amp; after</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+            </ul>
+        </section>
+
+        <br>
+
+        <section class="pt06">
+            <div class="responsive">
+                <h1><span>pt06 responsive</span></h1>
+            </div>
+            <div class="res02">
+                <figure>pt06</figure>
+                <figure>pt06</figure>
+                <figure>pt06</figure>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#!">menu01</a></li>
+                    <li><a href="#!">menu02</a></li>
+                    <li><a href="#!">menu03</a></li>
+                    <li><a href="#!">menu04</a></li>
+                </ul>
+            </nav>
+            <div class="mopen06">
+
+            </div>
+        </section>
+
+        <br>
+
+        <section class="pt07">
+            <div class="hover01">
+                <a href="#!">ha</a>
+                <ul>
+                    <li><a href="#!">01</a></li>
+                    <li><a href="#!">02</a></li>
+                    <li><a href="#!">03</a></li>
+                    <li><a href="#!">04</a></li>
+                </ul>
+            </div>
+
+            <h1>part07 hover &amp; before &amp; 다단 메뉴</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">menu01</a>
+                        <ul>
+                            <li><a href="#!">smenu01</a></li>
+                            <li><a href="#!">smenu02</a></li>
+                            <li><a href="#!">smenu03</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">menu02</a>
+                        <ul>
+                            <li><a href="#!">smenu01</a></li>
+                            <li><a href="#!">smenu02</a></li>
+                            <li><a href="#!">smenu03</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">menu03</a>
+                        <ul>
+                            <li><a href="#!">smenu01</a></li>
+                            <li><a href="#!">smenu02</a></li>
+                            <li><a href="#!">smenu03</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">menu04</a>
+                        <ul>
+                            <li><a href="#!">smenu01</a></li>
+                            <li><a href="#!">smenu02</a></li>
+                            <li><a href="#!">smenu03</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">menu05</a>
+                        <ul>
+                            <li><a href="#!">smenu01</a></li>
+                            <li><a href="#!">smenu02</a></li>
+                            <li><a href="#!">smenu03</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="visual">
+                slogan
+            </div>
+        </section>
+
+        <br>
+
+        <section class="pt08">
+            <!-- img hover scale after(line) -->
+            <section class="content">
+                <h2>part 08</h2>
+                <p>before &amp; after &amp; hover &amp; transform &amp; opacity &amp; visibility &amp; overflow </p>
+                <div class="container">
+                    <figure>
+                        <div class="inbox">
+                            <img src="/TIL/WEB/Green/TRN01/IMG/main_s011.jpg" alt="">
+                        </div>
+                        <a href="">more</a>
+                    </figure>
+                    <figure>
+                        <div class="inbox">
+                            <img src="/TIL/WEB/Green/TRN01/IMG/main_s012.jpg" alt="">
+                        </div>
+                        <a href="">more</a>
+                    </figure>
+                    <figure>
+                        <div class="inbox">
+                            <img src="/TIL/WEB/Green/TRN01/IMG/main_s013.jpg" alt="">
+                        </div>
+                        <a href="">more</a>
+                    </figure>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- 쇼핑몰 장바구니 hover & overflow -->
+            <section class="con02">
+                <h2>part 08</h2>
+                <p>before &amp; after &amp; hover &amp; transform &amp; opacity &amp; visibility &amp; overflow </p>
+                <div class="container">
+                    <figure>
+                        <div class="inbox">
+                            <img src="/TIL/WEB/Green/TRN01/IMG/main_s011.jpg" alt="">
+                        </div>
+                        <a href="">
+                            <i class="xi-cart"></i>
+                        </a>
+                    </figure>
+                    <figure>
+                        <div class="inbox">
+                            <img src="/TIL/WEB/Green/TRN01/IMG/main_s012.jpg" alt="">
+                        </div>
+                        <a href="">more</a>
+                    </figure>
+                    <figure>
+                        <div class="inbox">
+                            <img src="/TIL/WEB/Green/TRN01/IMG/main_s013.jpg" alt="">
+                        </div>
+                        <a href="">more</a>
+                    </figure>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="con03">
+                <h2>part 08</h2>
+                <p>before &amp; after &amp; hover &amp; transform &amp; opacity &amp; visibility &amp; overflow </p>
+                <div class="container">
+                    <figure>
+                        <div class="inbox">
+                            <img src="/TIL/WEB/Green/TRN01/IMG/main_s011.jpg" alt="">
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="inbox">
+                            <img src="/TIL/WEB/Green/TRN01/IMG/main_s012.jpg" alt="">
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="inbox">
+                            <img src="/TIL/WEB/Green/TRN01/IMG/main_s013.jpg" alt="">
+                        </div>
+                    </figure>
+                </div>
+            </section>
+        </section>
+
+        <br>
+
+        <section class="pt09">
+            <div class="top_banner">
+                <div class="container09">
+                    popup button - close / topbanner & sidebanner & totop (button) / cusror : pointer (js)
+                </div>
+                <button>
+                    <i class="xi-arrow-top"></i>
+                </button>
+            </div>
+
+            <section>
+
+            </section>
+
+            <div class="side_banner">
+                part 09
+                <button>
+                    <i class="xi-angle-right"></i>
+                </button>
+            </div>
+
+            <div class="popup01 popup">
+                popup button - close / topbanner & sidebanner & totop (button) / cusror : pointer (js)
+                <button>CLOSE</button>
+            </div>
+
+            <div class="popup02 popup">
+                popup button - close / topbanner & sidebanner & totop (button) / cusror : pointer (js)
+                <button>CLOSE</button>
+            </div>
+
+            <div class="popup03 popup">
+                popup button - close / topbanner & sidebanner & totop (button) / cusror : pointer (js)
+                <button>CLOSE</button>
+            </div>
+
+            <i class="xi-arrow-top totop"></i>
+        </section>
+    </main>
+
+    <script src="/TIL/WEB/Green/TRN01/JS/jquery-1.12.4.min.js">    </script>
+    <script>
+        // javascript 주석
+        document.querySelector('.mopen').addEventListener('click', function () {
+            console.log('찍었네');
+            // 자기에게 oo 클래스를 붙여줘
+            this.classList.toggle('oo')
+        });
+
+        document.querySelector('.mopen06').addEventListener('click', function () {
+            document.querySelector('nav').classList.toggle('on');
+            this.classList.toggle('on');
+        });
+        /* JS로 class만 붙여주고 일은 css가 하게 한다 (요즘 방식) */
+
+        const BTN = document.querySelectorAll('.popup button');
+        console.log(BTN);
+        BTN.forEach(el => {
+            el.addEventListener('click', function () {
+                el.parentElement.style.display = 'none';
+            })
+        });
+
+        $('.top_banner button').on('click', function () {
+            $('.top_banner .container09').slideToggle();
+            $(this).toggleClass('on');
+        });
+
+        $('.side_banner button').on('click', function () {
+            $(this).parent().toggleClass('on');
+        });
+
+        $('.totop').on('click', function () {
+            $('html,body').animate({ scrollTop: 0 }, 1000)
+        });
+
+        $(window).on('scroll', function () {
+            let sct = $(window).scrollTop();
+            if (sct > 500) {
+                $('.totop').fadeIn();
+            } else {
+                $('.totop').fadeOut();
+            }
+
+            // sct > 300 ? $('.totop').fadeIn() : $('.totop').fadeOut() ;
+            // if else 문을 줄이면 이렇게도 표현 가능 (삼항조건식? 명칭이 정확하진 않음)
+        });
+
+        // querySelectorAll 은 다수를 선택할 때 사용
+
+        // document.querySelector('button').addEventListener('click', function () {
+        //     this.parentElement.style.display = 'none'
+        // document.querySelector('.popup01').style.display = 'none' 바로 위 문장이랑 같은 말이다
+        // querySelector 는 단수만 선택 가능
+        // })
+
+        // $('.popup button').on('click', function () {
+        //     $(this).parent().hide();
+        // })
+        // jQuery 용
+    </script>
+</body>
+
+</html>

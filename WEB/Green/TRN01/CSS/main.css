@@ -1,0 +1,661 @@
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 최상단 설명 글 */
+
+.header .top_banner {
+    border-bottom: 1px solid #f2f2f2;
+    line-height: 40px;
+}
+
+.header .top_banner span {
+    margin: 0 0 0 auto;
+}
+
+.header .top_banner a {
+    margin: 0 0 0 10px;
+    padding: 0 10px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+/* 로고와 메뉴 */
+
+.header .gnb {
+    margin: 0 0 0 auto;
+}
+
+.header .gnb>ul {
+    display: flex;
+    line-height: 90px;
+    font-size: 19px;
+    font-weight: 500;
+    gap: 30px;
+    /* gap은 IE에서 안 먹힌다 */
+}
+
+/* main_visual background img(center) & slogan & slider(slick) & slick-dots */
+
+.main_visual {
+    position: relative;
+    height: 600px;
+    background: url(../IMG/main_slider01.jpg) no-repeat center top/cover;
+}
+
+.main_visual .slogan {
+    position: absolute;
+    top: 100px;
+    right: 600px;
+    /* inset: 100px 600px auto auto; */
+    /* inset IE에선 지원X. 상우하좌 축약형. 미국에서 많이 씀 */
+}
+
+.main_slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+}
+
+.main_slider h3 {
+    margin: 0 0 30px 0;
+    background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.main_slider strong {
+    display: block;
+    margin: 0 0 20px 0;
+    color: #ffc107;
+}
+
+.main_slider .slick-dots {
+    padding: 30px 0 0 0;
+}
+
+.main_slider .slick-dots li {
+    display: inline-block;
+    width: 80px;
+    height: 4px;
+    margin: 0 10px 0 0;
+    background: #333;
+}
+
+.main_slider .slick-dots li.slick-active {
+    background: goldenrod;
+}
+
+.main_slider .slick-dots button {
+    display: none;
+}
+
+.gradcircle {
+    background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+}
+
+/* main_banner position & box model & hover & flex-end & background(no-repeat) & linear-gradient & border-radius */
+
+.main_banner {
+    transform: translateY(-50%);
+}
+
+.main_banner figure {
+    display: flex;
+    flex: 1;
+    height: 200px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.main_banner figure:hover {
+    height: 220px;
+}
+
+.main_banner .container {
+    height: 220px;
+    align-items: flex-end;
+}
+
+.main_banner figure:nth-child(1) {
+    background: rgb(218, 84, 75);
+}
+
+.main_banner figure:nth-child(2) {
+    background: rgb(244, 203, 79);
+}
+
+.main_banner figure:nth-child(3) {
+    background: rgb(51, 118, 137);
+}
+
+.main_banner figure:nth-child(4) {
+    background: rgb(111, 164, 118);
+}
+
+.main_banner figure:nth-child(1) a {
+    background: url(../IMG/icon_set_w.png) no-repeat 0 0;
+}
+
+.main_banner figure:nth-child(2) a {
+    background: url(../IMG/icon_set_w.png) no-repeat -100px 0;
+}
+
+.main_banner figure:nth-child(3) a {
+    background: url(../IMG/icon_set_w.png) no-repeat -200px 0;
+}
+
+.main_banner figure:nth-child(4) a {
+    background: url(../IMG/icon_set_w.png) no-repeat -300px 0;
+}
+
+.main_banner figure a {
+    display: flex;
+    width: 110px;
+    height: 120px;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 13px;
+}
+
+.main_banner .customer {
+    position: relative;
+    flex: 2;
+    height: 200px;
+    padding: 50px 30px 0 0;
+    background: #ddd;
+    text-align: right;
+}
+
+.main_banner .customer a {
+    display: block;
+    margin: 0 0 15px 0;
+    background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.main_banner .customer i {
+    position: absolute;
+    top: -29px;
+    right: -30px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(218, 84, 75);
+    color: white;
+    font-size: 38px;
+}
+
+/* main_link img & h3 & p & hover & after */
+
+.main_link {
+    padding: 0 0 100px 0;
+    background: linear-gradient(transparent, #f7f7f7)
+}
+
+.main_link .container {
+    gap: 30px;
+}
+
+.main_link figure {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    border-radius: 50px 0 0 0;
+}
+
+.main_link figure a {
+    position: absolute;
+    top: 54%;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(244, 203, 79, 0.5);
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+.main_link figure a:hover {
+    background: rgb(244, 203, 79, 1);
+}
+
+.main_link img {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+.main_link h3 {
+    margin: 0 0 25px 0;
+    font-size: 21px;
+    font-weight: 500;
+    /* Noto Sans 폰트는 홀수 px 가 디자인적으로 이쁘다 */
+}
+
+.main_link p {
+    font-size: 13px;
+}
+
+.main_link h3:after {
+    display: block;
+    width: 80px;
+    height: 1px;
+    margin: 15px 0;
+    background: goldenrod;
+    content: "";
+    /* before, after : 디자인적으로 쓰는 것 (중요한 내용X) 시각장애인들이 못 읽음 */
+}
+
+/* footer 최하단 */
+
+.footer {
+    padding: 50px 0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+address {
+    font-style: normal;
+}
+
+.footer ul {
+    margin: 10px 0;
+}
+
+.footer ul>li {
+    display: inline-block;
+}
+
+.footer ul>li~li::before {
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    margin: 0 15px;
+    background: #ddd;
+    vertical-align: middle;
+    content: "";
+}
+
+
+
+/*
+
+내가 만듬. 2022. 05. 04
+responsive 768
+
+*/
+
+
+
+@media (max-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    /* 최상단 설명 글 */
+
+    .header .top_banner {
+        display: none;
+        border-bottom: 1px solid #f2f2f2;
+        line-height: 40px;
+    }
+
+    .header .top_banner span {
+        margin: 0 0 0 auto;
+    }
+
+    .header .top_banner a {
+        margin: 0 0 0 10px;
+        padding: 0 10px;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    /* 로고와 메뉴 */
+
+    .header h1 {
+        padding: 0 15px;
+    }
+
+    .header .gnb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: calc(100% - 90px);
+        height: 100vh;
+        margin: 0 0 0 auto;
+        border-right: 1px solid #333;
+        background: #fff;
+        z-index: 999;
+        transition: 0.5s;
+    }
+
+    .header .gnb>ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        /* gap은 IE에서 안 먹힌다 */
+        padding: 50px 15px;
+        line-height: 40px;
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    .header .gnb>ul a {
+        display: block;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header .gnb.on {
+        left: 0;
+    }
+
+    /* main_visual background img(center) & slogan & slider(slick) & slick-dots */
+
+    .main_visual {
+        position: relative;
+        height: calc(100vh - 90px);
+        background: url(../IMG/main_slider01.jpg) no-repeat right top/cover;
+    }
+
+    .main_visual .slogan {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 600px;
+        /* inset: 100px 600px auto auto; */
+        /* inset IE에선 지원X. 상우하좌 축약형. 미국에서 많이 씀 */
+    }
+
+    .main_slider {
+        position: absolute;
+        top: auto;
+        bottom: 20%;
+        left: 0;
+        transform: translate(0, 0);
+        width: 100%;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .main_slider h3 {
+        margin: 0 0 30px 0;
+        background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+        color: transparent;
+        -webkit-background-clip: text;
+        font-size: 11vw;
+        font-weight: 900;
+    }
+
+    .main_slider strong {
+        display: block;
+        margin: 0 0 20px 0;
+        color: #ffc107;
+    }
+
+    .main_slider .slick-dots {
+        padding: 30px 0 0 0;
+        text-align: center;
+    }
+
+    .main_slider .slick-dots li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 7px 0 0;
+        background: #333;
+    }
+
+    .main_slider .slick-dots li.slick-active {
+        background: goldenrod;
+    }
+
+    .main_slider .slick-dots button {
+        display: none;
+    }
+
+    .gradcircle {
+        background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+    }
+
+    /* main_banner position & box model & hover & flex-end & background(no-repeat) & linear-gradient & border-radius */
+
+    .main_banner {
+        transform: translateY(0);
+    }
+
+    .main_banner figure {
+        display: flex;
+        flex: 1 1 50%;
+        height: 200px;
+        color: white;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    .main_banner figure:hover {
+        height: 200px;
+    }
+
+    .main_banner .container {
+        height: auto;
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main_banner figure:nth-child(1) {
+        background: rgb(218, 84, 75);
+    }
+
+    .main_banner figure:nth-child(2) {
+        background: rgb(244, 203, 79);
+    }
+
+    .main_banner figure:nth-child(3) {
+        background: rgb(51, 118, 137);
+    }
+
+    .main_banner figure:nth-child(4) {
+        background: rgb(111, 164, 118);
+    }
+
+    .main_banner figure:nth-child(1) a {
+        background: url(../IMG/icon_set_w.png) no-repeat 0 0;
+    }
+
+    .main_banner figure:nth-child(2) a {
+        background: url(../IMG/icon_set_w.png) no-repeat -100px 0;
+    }
+
+    .main_banner figure:nth-child(3) a {
+        background: url(../IMG/icon_set_w.png) no-repeat -200px 0;
+    }
+
+    .main_banner figure:nth-child(4) a {
+        background: url(../IMG/icon_set_w.png) no-repeat -300px 0;
+    }
+
+    .main_banner figure a {
+        display: flex;
+        width: 110px;
+        height: 120px;
+        font-size: 13px;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .main_banner .customer {
+        position: relative;
+        flex: 2;
+        height: 200px;
+        padding: 50px 30px 0 0;
+        background: #ddd;
+        text-align: right;
+    }
+
+    .main_banner .customer a {
+        display: block;
+        margin: 0 0 15px 0;
+        background: linear-gradient(to right top, #0a96ba, #032777, #333333);
+        color: transparent;
+        -webkit-background-clip: text;
+        font-size: 38px;
+        font-weight: 700;
+    }
+
+    .main_banner .customer i {
+        position: absolute;
+        top: -30px;
+        right: 15px;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: rgb(218, 84, 75);
+        color: white;
+        font-size: 38px;
+    }
+
+    /* main_link img & h3 & p & hover & after */
+
+    .main_link {
+        padding: 0 0 100px 0;
+        background: linear-gradient(transparent, #f7f7f7)
+    }
+
+    .main_link .container {
+        padding: 50px 15px;
+        gap: 30px;
+    }
+
+    .main_link figure {
+        position: relative;
+        overflow: hidden;
+        flex: 1;
+        border-radius: 50px 0 0 0;
+    }
+
+    .main_link figure a {
+        position: absolute;
+        top: 54%;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: rgb(244, 203, 79, 0.5);
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 60px;
+        transition: 1s;
+    }
+
+    .main_link figure a:hover {
+        background: rgb(244, 203, 79, 1);
+    }
+
+    .main_link img {
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+
+    .main_link h3 {
+        margin: 0 0 25px 0;
+        font-size: 21px;
+        font-weight: 500;
+        /* Noto Sans 폰트는 홀수 px 가 디자인적으로 이쁘다 */
+    }
+
+    .main_link p {
+        font-size: 13px;
+    }
+
+    .main_link h3:after {
+        display: block;
+        width: 80px;
+        height: 1px;
+        margin: 15px 0;
+        background: goldenrod;
+        content: "";
+        /* before, after : 디자인적으로 쓰는 것 (중요한 내용X) 시각장애인들이 못 읽음 */
+    }
+
+    /* footer 최하단 */
+
+    .footer {
+        padding: 50px 0;
+        border-top: 1px solid #ddd;
+        text-align: center;
+    }
+
+    address {
+        font-style: normal;
+    }
+
+    .footer ul {
+        margin: 10px 0;
+    }
+
+    .footer ul>li {
+        display: inline-block;
+        padding: 5px 15px;
+    }
+
+    .footer ul>li~li::before {
+        display: none;
+        width: 1px;
+        height: 13px;
+        margin: 0 15px;
+        background: #ddd;
+        vertical-align: middle;
+        content: "";
+    }
+
+    /* 반응형 Js toggleClass icon */
+
+    .icon {
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        padding: 10px;
+        background: #ddd;
+        font-size: 41px;
+    }
+
+    .icon.on {
+        display: none;
+    }
+
+    .icon01 {
+        display: none;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        padding: 10px;
+        background: #ddd;
+        font-size: 41px;
+    }
+
+    .icon01.on {
+        display: block;
+    }
+}
