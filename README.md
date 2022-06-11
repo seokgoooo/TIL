@@ -1,4 +1,8 @@
-# seokgoooo.github.io
+# TIL (Today I Learned)
+- 오늘 배운 내용들 입니다
+- 정리중입니다~
+
+
 https://d2.naver.com/news/3435170
 
 https://nanalike.notion.site/35e0e234d27948afba77f062939f7491?v=2cb39e3c4fdc4fcaa0c00383ca7abdb4
