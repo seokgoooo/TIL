@@ -93,6 +93,9 @@ console.log('your message')
 
 * 그 사이에 java, js, ts, kotlin 등 해당 언어를 써주면 그 언어의 문법에 맞게 알아서 보기 쉽게 변한다.
 
-
+10. 체크박스
+- [ ] 빈 체크박스
+- [x] 체크된 체크박스
+* [] 사이에 space 꼭 넣어주자 '[x]' x를 넣어주면 체크! 
 
 Thanks for Dreamcoding
