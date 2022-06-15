@@ -1,77 +1,97 @@
-package bmiMembership;
+package bmi;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-class MemberManage implements Comparable<Member> {
+class MemberManage {
 	Scanner scan = new Scanner(System.in);
 
-	// ìµœëŒ€ 10ëª… ë‹´ì„ ìˆ˜ ìˆëŠ” Member í´ë˜ìŠ¤ ë°°ì—´
+	// ÃÖ´ë 10¸í ´ãÀ» ¼ö ÀÖ´Â Member Å¬·¡½º ¹è¿­
 	Member[] members = new Member[10];
 
-	// íšŒì›ë²ˆí˜¸ ê°œë… (ë°°ì—´ index ì„¸íŒ…)
+	// È¸¿ø¹øÈ£ °³³ä (¹è¿­ index ¼¼ÆÃ)
 	int count = 0;
 
 	public static void printMainMenu() {
 		System.out.println("-----------------------");
-		System.out.println("    íšŒì› ê´€ë¦¬ í”„ë¡œê·¸ë¨");
-		System.out.println("--1.--ì‹ ê·œ íšŒì› ë“±ë¡-------");
-		System.out.println("--2.--ê¸°ì¡´ íšŒì› ë“±ë¡-------");
-		System.out.println("--3.--íšŒì› ëª©ë¡ ë³´ê¸°-------");
-		System.out.println("--4.--íšŒì› BMI ë³´ê¸°------");
-		System.out.println("--5.--í‚¤(ì˜¤ë¦„ì°¨ìˆœ) ë³´ê¸°---");
-		System.out.println("--6.--ëª¸ë¬´ê²Œ(ì˜¤ë¦„ì°¨ìˆœ) ë³´ê¸°");
-		System.out.println("--0.--ì¢…-------ë£Œ-------");
+		System.out.println("    È¸¿ø °ü¸® ÇÁ·Î±×·¥");
+		System.out.println("--1.--½Å±Ô È¸¿ø µî·Ï-------");
+		System.out.println("--2.--±âÁ¸ È¸¿ø »èÁ¦-------");
+		System.out.println("--3.--±âÁ¸ È¸¿ø º¯°æ-------");
+		System.out.println("--4.--È¸¿ø ¸ñ·Ï º¸±â-------");
+		System.out.println("--5.--È¸¿ø BMI º¸±â------");
+		System.out.println("--6.--Å°(¿À¸§Â÷¼ø) º¸±â---");
+		System.out.println("--7.--¸ö¹«°Ô(¿À¸§Â÷¼ø) º¸±â");
+		System.out.println("--0.--Á¾-------·á-------");
 		System.out.println("-----------------------");
 	}
 
 	public void makeBase() {
 		for (int i = 0; i < 10; i++) {
-			members[i] = new Member("0", 0, 0);
+			members[i] = new Member("0", 999, 999);
 		}
 	}
 
 	public void inputNewMember() {
 		if (count < 10) {
+			// ½Å±Ô È¸¿ø Á¤º¸ ÀÔ·Â
+			Member newMember = new Member();
+			newMember.setName(inputName());
+			newMember.setHeight(inputHeight());
+			newMember.setWeight(inputWeight());
+
+			int flag = 0;
+
+			// Áßº¹ È¸¿ø Ã£´Â °Ë»ç
+			// Áßº¹ Ã£À¸¸é flag = 1 ·Î º¯°æÇØ¼­ println È£Ãâ
+			// ±×¸®°í ÃÊ±âÈ­
 			for (int i = 0; i < 10; i++) {
-				if (count == 0) {
-					members[0] = new Member(inputName(), inputHeight(), inputWeight());
-					count++;
-					break;
-				} else if (!members[count].equals(members[i])) {
-					members[count] = new Member(inputName(), inputHeight(), inputWeight());
-					count++;
-					break;
-				} else {
-					members[count] = new Member("0", 0, 0);
+				if (members[i].equals(newMember)) {
+					flag = 1;
+					newMember = new Member("0", 999, 999);
 					break;
 				}
 			}
+
+			// Áßº¹ ¾øÀ¸¸é »õ·Î¿î ¹øÈ£·Î µî·Ï
+			if (flag == 0) {
+				members[count] = newMember;
+				count++;
+			} else {
+				System.out.println("Áßº¹ È¸¿ø ÀÔ´Ï´Ù");
+			}
+		} else {
+			System.out.println("½Å±Ô È¸¿ø µî·Ï ºÒ°¡");
 		}
 	}
 
 	public String inputName() {
-		System.out.print("ì´ë¦„: ");
-		scan.nextLine();
+		System.out.print("ÀÌ¸§: ");
 		String name = scan.nextLine();
 		return name;
 	}
 
 	public double inputHeight() {
-		System.out.print("í‚¤(m): ");
+		System.out.print("Å°(cm): ");
 		double height = scan.nextDouble();
 		return height;
 	}
 
 	public double inputWeight() {
-		System.out.print("ëª¸ë¬´ê²Œ(kg): ");
+		System.out.print("¸ö¹«°Ô(kg): ");
 		double weight = scan.nextDouble();
+		scan.nextLine();					// ¼ø¼­´ë·Î nextLine nextDouble nextDouble »ç¿ëµÇ±â ¶§¹®¿¡ ¸¶Áö¸·¿¡ ¹öÆÛ ÃÊ±âÈ­
 		return weight;
 	}
 
-	public void changeMember() {
+	public void deleteMember() {
 		// TODO Auto-generated method stub
 		return;
+	}
+	
+	public void changeMember() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	public void printMemberList() {
@@ -83,55 +103,51 @@ class MemberManage implements Comparable<Member> {
 	public void printBmi() {
 		for (int i = 0; i < count; i++) {
 			if (members[i].getBmi(members[i].getHeight(), members[i].getWeight()) >= 35) {
-				System.out.println("ê³ ë„ë¹„ë§Œ");
-				System.out.println(members.toString());
-			} else if (members[i].getBmi(members[i].getHeight(), members[i].getWeight()) >= 30
+				System.out.println("°íµµºñ¸¸");
+				System.out.println(members[i].toString());
+			}
+			if (members[i].getBmi(members[i].getHeight(), members[i].getWeight()) >= 30
 					&& members[i].getBmi(members[i].getHeight(), members[i].getWeight()) < 35) {
-				System.out.println("ì¤‘ë„ë¹„ë§Œ");
-			} else if (members[i].getBmi(members[i].getHeight(), members[i].getWeight()) >= 25
+				System.out.println("Áßµµºñ¸¸");
+				System.out.println(members[i].toString());
+			}
+			if (members[i].getBmi(members[i].getHeight(), members[i].getWeight()) >= 25
 					&& members[i].getBmi(members[i].getHeight(), members[i].getWeight()) < 30) {
-				System.out.println("ê²½ë„ë¹„ë§Œ");
-			} else if (members[i].getBmi(members[i].getHeight(), members[i].getWeight()) >= 23
+				System.out.println("°æµµºñ¸¸");
+				System.out.println(members[i].toString());
+			}
+			if (members[i].getBmi(members[i].getHeight(), members[i].getWeight()) >= 23
 					&& members[i].getBmi(members[i].getHeight(), members[i].getWeight()) < 25) {
-				System.out.println("ê³¼ì²´ì¤‘");
-			} else if (members[i].getBmi(members[i].getHeight(), members[i].getWeight()) >= 18.5
+				System.out.println("°úÃ¼Áß");
+				System.out.println(members[i].toString());
+			}
+			if (members[i].getBmi(members[i].getHeight(), members[i].getWeight()) >= 18.5
 					&& members[i].getBmi(members[i].getHeight(), members[i].getWeight()) < 23) {
-				System.out.println("ì •ìƒ");
-			} else if (members[i].getBmi(members[i].getHeight(), members[i].getWeight()) > 0
+				System.out.println("Á¤»ó");
+				System.out.println(members[i].toString());
+			}
+			if (members[i].getBmi(members[i].getHeight(), members[i].getWeight()) > 0
 					&& members[i].getBmi(members[i].getHeight(), members[i].getWeight()) < 18.5) {
-				System.out.println("ì €ì²´ì¤‘");
+				System.out.println("ÀúÃ¼Áß");
+				System.out.println(members[i].toString());
 			} else {
 
 			}
 		}
 	}
 
-	@Override
-	public int compareTo(Member obj) {
-		Member other = obj;
-		if (obj.getHeight() < other.getHeight())
-			return -1;
-		else if (obj.getHeight() > other.getHeight())
-			return 1;
-		else
-			return 0;
-	}
-
 	public void printHeightSort() {
 		Arrays.sort(members);
 		for (int i = 0; i < count; i++) {
-			System.out.println("ì´ë¦„= " + members[i].getName() + "í‚¤= " + members[i].getHeight());
+			System.out.println("ÀÌ¸§= " + members[i].getName() + " Å°(cm)= " + members[i].getHeight());
 		}
 	}
 
-//	public int compare(Member members) {
-//		Member other = members;
-//		return (int) (members.getWeight() - other.getWeight());
-//	}
-//
-//	public void printWeightSort() {
-//		Arrays.sort(members);
-//		for (Member m : members)
-//			System.out.println("ì´ë¦„= " + m.getName() + "ëª¸ë¬´ê²Œ= " + m.getWeight());
-//	}
+	public void printWeightSort() {
+		Arrays.sort(members);
+		for (int i = 0; i < count; i++) {
+			System.out.println("ÀÌ¸§= " + members[i].getName() + " ¸ö¹«°Ô(kg)= " + members[i].getWeight());
+		}
+	}
+
 }

@@ -1,36 +1,39 @@
-// íšŒì› ê´€ë¦¬ í”„ë¡œê·¸ëž¨
-// íšŒì›ì„ ì½˜ì†”ìž…ë ¥ìœ¼ë¡œ ë“±ë¡í•  ìˆ˜ ìžˆê²Œ. ìµœëŒ€ 10ëª…
-// ì¤‘ë³µ ë“±ë¡ X
-// ì¤‘ë³µ : ì´ë¦„, í‚¤ , ëª¸ë¬´ê²Œ ë™ì¼í•  ë•Œ
-// ê¸°ì¤€ì— ë”°ë¼ ì§‘ê³„ë¥¼ í•´ì„œ ëª©ë¡ì„ ë³´ì—¬ì¤˜ì•¼í•©ë‹ˆë‹¤.
+package bmi;
+//È¸¿ø °ü¸® ÇÁ·Î±×·¥
 
-// íšŒì›
-// ì´ë¦„
-// í‚¤
-// ëª¸ë¬´ê²Œ
+//È¸¿øÀ» ÄÜ¼ÖÀÔ·ÂÀ¸·Î µî·ÏÇÒ ¼ö ÀÖ°Ô. ÃÖ´ë 10¸í
+//Áßº¹ µî·Ï X
+//Áßº¹ : ÀÌ¸§, Å° , ¸ö¹«°Ô µ¿ÀÏÇÒ ¶§
+//±âÁØ¿¡ µû¶ó Áý°è¸¦ ÇØ¼­ ¸ñ·ÏÀ» º¸¿©Áà¾ßÇÕ´Ï´Ù.
 
-// BMI ì§€ìˆ˜
-// BMI = ëª¸ë¬´ê²Œ(kg) / í‚¤^2(m)
+//È¸¿ø
+//ÀÌ¸§
+//Å°
+//¸ö¹«°Ô
 
-// ê³ ë„ ë¹„ë§Œ : 35 ì´ìƒ
-// ì¤‘(é‡)ë„ ë¹„ë§Œ (2ë‹¨ê³„ ë¹„ë§Œ) : 30 ì´ìƒ - 35 ë¯¸ë§Œ
-// ê²½ë„ ë¹„ë§Œ (1ë‹¨ê³„ ë¹„ë§Œ) : 25 ì´ìƒ - 30 ë¯¸ë§Œ
-// ê³¼ì²´ì¤‘ : 23 ì´ìƒ - 25 ë¯¸ë§Œ
-// ì •ìƒ : 18.5 ì´ìƒ - 23 ë¯¸ë§Œ
-// ì €ì²´ì¤‘ : 18.5 ë¯¸ë§Œ
+//BMI Áö¼ö
+//BMI = ¸ö¹«°Ô(kg) / Å°^2(m)
 
-// ë©¤ë²„ ê´€ë¦¬ í”„ë¡œê·¸ëž¨
-// í‚¤ ìˆœ(ì˜¤ë¦„ì°¨ìˆœ)ìœ¼ë¡œ ë©¤ë²„ë¥¼ ì¡°íšŒí•˜ê¸°
+//°íµµ ºñ¸¸ : 35 ÀÌ»ó
+//Áß(ñì)µµ ºñ¸¸ (2´Ü°è ºñ¸¸) : 30 ÀÌ»ó - 35 ¹Ì¸¸
+//°æµµ ºñ¸¸ (1´Ü°è ºñ¸¸) : 25 ÀÌ»ó - 30 ¹Ì¸¸
+//°úÃ¼Áß : 23 ÀÌ»ó - 25 ¹Ì¸¸
+//Á¤»ó : 18.5 ÀÌ»ó - 23 ¹Ì¸¸
+//ÀúÃ¼Áß : 18.5 ¹Ì¸¸
+
+//¸â¹ö °ü¸® ÇÁ·Î±×·¥
+//Å° ¼ø(¿À¸§Â÷¼ø)À¸·Î ¸â¹ö¸¦ Á¶È¸ÇÏ±â
 //----------------------------
-// ëª¸ë¬´ê²Œ ìˆœ(ì˜¤ë¦„ì°¨ìˆœ)ìœ¼ë¡œ ë©¤ë²„ë¥¼ ì¡°íšŒí•˜ê¸° << ì–´ì œê±°ëž‘ ìœ„ì—ê±° ë‹¤ í•˜ê³  ë‚œ í›„~~
+//¸ö¹«°Ô ¼ø(¿À¸§Â÷¼ø)À¸·Î ¸â¹ö¸¦ Á¶È¸ÇÏ±â << ¾îÁ¦°Å¶û À§¿¡°Å ´Ù ÇÏ°í ³­ ÈÄ~~
 
-package bmiMembership;
-
-class Member {
+class Member implements Comparable {
 	private boolean membership;
 	private String name;
 	private double height;
 	private double weight;
+
+	public Member() {
+	}
 
 	public Member(String name, double height, double weight) {
 		this.name = name;
@@ -70,9 +73,9 @@ class Member {
 		this.weight = weight;
 	}
 
-	// BMI ì§€ìˆ˜ ê³„ì‚°
+	// BMI Áö¼ö °è»ê
 	public double getBmi(double height, double weight) {
-		return weight / (height * height);
+		return (weight / ((height / 100) * (height / 100)));
 	}
 
 	@Override
@@ -96,7 +99,17 @@ class Member {
 
 	@Override
 	public String toString() {
-		return "Member [name= " + name + ", height= " + height + ", weight= " + weight + ", BMI= "
-				+ getBmi(height, weight) + "]";
+		return "[ÀÌ¸§= " + name + ", Å°= " + height + ", ¸ö¹«°Ô= " + weight + ", BMI= " + getBmi(height, weight) + "]";
+	}
+	
+	@Override
+	public int compareTo(Object member) {
+		Member other = (Member) member;
+		return (int) (this.height - other.height);
+	}
+	
+	public int compareToWeight(Object member) {
+		Member other = (Member) member;
+		return (int) (this.weight - other.weight);
 	}
 }
