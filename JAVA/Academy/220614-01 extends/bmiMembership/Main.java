@@ -1,54 +1,55 @@
 /*
- * ´õ ÀÌ»ó ÄÚµå¸¸À¸·Î´Â ¼³¸íÇÏ±â°¡ ¾î·Æ´Ù ±×¸²°ú Outline À¸·Î ¼³¸íÇØ¾ßÇÔ
+ * ë” ì´ìƒ ì½”ë“œë§Œìœ¼ë¡œëŠ” ì„¤ëª…í•˜ê¸°ê°€ ì–´ë µë‹¤ ê·¸ë¦¼ê³¼ Outline ìœ¼ë¡œ ì„¤ëª…í•´ì•¼í•¨
  * 
- * Å¬·¡½ºÀÇ ¿ªÇÒºÎÅÍ ¼³¸í
+ * í´ë˜ìŠ¤ì˜ ì—­í• ë¶€í„° ì„¤ëª…
  */
-package bmi;
+package bmiMembership;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		MemberManage run = new MemberManage();
+		Manage run = new Manage();
 
-		// Member ¹è¿­ ÃÊ±âÈ­
+		// Member ë°°ì—´ ì´ˆê¸°í™”
 		run.makeBase();
-		
+			
 		boolean on = true;
 		while (on) {
 			run.printMainMenu();
 			switch (scan.nextInt()) {
 			case 1:
-				// Áßº¹ µî·Ï X (ÀÌ¸§, Å°, ¸ö¹«°Ô µ¿ÀÏÇÒ ¶§)
-				// ±âÁØ¿¡ µû¶ó Áı°è¸¦ ÇØ¼­ ¸ñ·ÏÀ» º¸¿©Áà¾ßÇÕ´Ï´Ù.
+				// ì¤‘ë³µ ë“±ë¡ X (ì´ë¦„, í‚¤, ëª¸ë¬´ê²Œ ë™ì¼í•  ë•Œ)
+				// ê¸°ì¤€ì— ë”°ë¼ ì§‘ê³„ë¥¼ í•´ì„œ ëª©ë¡ì„ ë³´ì—¬ì¤˜ì•¼í•©ë‹ˆë‹¤.
 				run.inputNewMember();
 				break;
 			case 2:
-				// ±âÁ¸ È¸¿ø »èÁ¦
+				// ê¸°ì¡´ íšŒì› ì‚­ì œ
 				run.deleteMember();
 				break;
 			case 3:
-				// ±âÁ¸ È¸¿ø º¯°æ
+				// ê¸°ì¡´ íšŒì› ë³€ê²½
 				run.changeMember();
 				break;
 			case 4:
-				// È¸¿ø ¸ñ·Ï Ãâ·Â
+				// íšŒì› ëª©ë¡ ì¶œë ¥
 				run.printMemberList();
 				break;
 			case 5:
-				// BMI Áö¼ö Á¶°Ç Ãâ·Â
+				// BMI ì§€ìˆ˜ ì¡°ê±´ ì¶œë ¥
 				run.printBmi();
 				break;
 			case 6:
-				// Å°(¿À¸§Â÷¼ø) Á¤·Ä Ãâ·Â
+				// í‚¤(ì˜¤ë¦„ì°¨ìˆœ) ì •ë ¬ ì¶œë ¥
 				run.printHeightSort();
 				break;
 			case 7:
-				// ¸ö¹«°Ô(¿À¸§Â÷¼ø) Á¤·Ä Ãâ·Â
+				// ëª¸ë¬´ê²Œ(ì˜¤ë¦„ì°¨ìˆœ) ì •ë ¬ ì¶œë ¥
 				run.printWeightSort();
 				break;
 			case 0:
-				System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+				System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 				on = false;
 				break;
 			default:
