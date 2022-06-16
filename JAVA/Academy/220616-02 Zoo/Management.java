@@ -2,8 +2,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
+// Management class : ÇÁ·Î±×·¥ ¼³°èµµ
 public class Management {
-	// ë©”ì¸ í”„ë¡œê·¸ë¨
+	// ¸ŞÀÎ ÇÁ·Î±×·¥
 	public void run(Scanner scan, Management main, List<Animal> animals, List<Staff> staffs, int animalIndex) {
 		boolean on = true;
 		while (on) {
@@ -11,17 +12,39 @@ public class Management {
 			int button = scan.nextInt();
 			switch (button) {
 			case 1:
-				animals.add(new Animal(main.inputAnimalBoolean(), main.inputAnimalSpecies(), main.inputAnimalAge(),
-						main.inputAnimalWeight()));
+				// µ¿¹° Ãß°¡ ¸Ş¼Òµå
+				inputAnimal(main, animals);
 				break;
 			case 2:
-				++animalIndex;
-				staffs.add(new Staff(main.inputStaffJob(), main.inputStaffName(), animals.get(animalIndex)));
+				// Á÷¿ø Ãß°¡ ¸Ş¼Òµå
+				// Á÷¿ø ÀÔ·ÂºÎÅÍ ¹Ş´Â´Ù
+				staffs.add(new Staff(main.inputStaffJob(), main.inputStaffName(), null));
+
+				// ÀÔ·Â ¹ŞÀº staff °´Ã¼¿¡ Á¶·Ã»ç°¡ Æ÷ÇÔµÇ¾î ÀÖÀ¸¸é µ¿¹°À» ´ã´çÇØ¾ß ÇÑ´Ù.
+				// staffs ¹è¿­ÀÇ ¸¶Áö¸· indexÀÇ ´ã´çÀÌ Á¶·Ã»ç¶ó¸é ´ã´çÇÒ ¼ö ÀÖ´Â µ¿¹°ÀÌ ³²¾ÆÀÖ´ÂÁö Ã¼Å©ÇÑ´Ù.
+				if (staffs.get(staffs.size() - 1).getJob().equals("Á¶·Ã»ç")) {
+					// animals ¹è¿­ÀÇ ÀÎµ¦½º ¹øÈ£°¡ animals ¹è¿­ÀÇ ÃÖ´ë°ª º¸´Ù ÀÛÀ¸¸é
+					// ---> Áï, ¹èÁ¤¹ŞÁö ¸øÇÑ µ¿¹°ÀÌ ³²¾Æ ÀÖÀ¸¸é
+					// ¹æ±İ ÀÔ·Â ¹ŞÀº staffs ¹è¿­ÀÇ ¸¶Áö¸· indexÀÇ staff °´Ã¼ÀÇ animal ÇÊµå¿¡ ³²Àº µ¿¹°À» Ãß°¡ÇØÁØ´Ù.
+					// ±×¸®°í animals ¹è¿­ÀÇ ÀÎµ¦½º¹øÈ£¸¦ ´Ã·ÁÁØ´Ù.
+					if (animalIndex < animals.size()) {
+						staffs.get(staffs.size() - 1).setAnimals(animals.get(animalIndex));
+						animalIndex++;
+						System.out.println("Á÷¿ø Ãß°¡ ¿Ï·á");
+					} else {
+						// µ¿¹° ÀüºÎ°¡ ¹èÁ¤ ¹Ş¾Æ ÀÖÀ¸¸é Á¶·Ã»ç°¡ ´ã´çÇÒ µ¿¹°ÀÌ ¾ø±â ¶§¹®¿¡ Á¶·Ã»ç Ãß°¡°¡ ºÒ°¡´ÉÇÏ´Ù.
+						// ¹æ±İ ÀÔ·Â ¹ŞÀº staff °´Ã¼´Â »èÁ¦ÇÑ´Ù.
+						System.out.println("´ã´çÇÒ ¼ö ÀÖ´Â µ¿¹°ÀÌ ¾ø½À´Ï´Ù");
+						staffs.remove(staffs.size() - 1);
+					}
+				} else {
+					System.out.println("Á÷¿ø Ãß°¡ ¿Ï·á");
+				}
 				break;
 			case 3:
-				// ArrayList ì¶œë ¥ë²• ( ë” ìˆëŠ”ë° ë‹¤ë¥¸ interface ì‚¬ìš©í•˜ëŠ” 2ê°€ì§€ëŠ” ì¼ë‹¨ ëºŒ ì§€ê¸ˆì€ 2ê°€ì§€ )
-				// for-each ë¬¸ ì‚¬ìš©ë²•
-				// ì „ì²´ ë™ë¬¼ ì¶œë ¥
+				// ArrayList Ãâ·Â¹ı ( ´õ ÀÖ´Âµ¥ ´Ù¸¥ interface »ç¿ëÇÏ´Â 2°¡Áö´Â ÀÏ´Ü »­ Áö±İÀº 2°¡Áö )
+				// for-each ¹® »ç¿ë¹ı
+				// ÀüÃ¼ µ¿¹° Ãâ·Â
 				for (Animal print : animals)
 					System.out.println(print);
 				System.out.println();
@@ -32,32 +55,47 @@ public class Management {
 //		        }
 				break;
 			case 4:
-				// ìœ¡ì‹ (true)ì¸ ì¡°ê±´ì— ë§ëŠ” ë™ë¬¼ ì¶œë ¥
+				// À°½Ä (true)ÀÎ Á¶°Ç¿¡ ¸Â´Â µ¿¹° Ãâ·Â
 				printTrueAnimal(animals);
 				break;
 			case 5:
-				// ì´ˆì‹ (false)ì¸ ì¡°ê±´ì— ë§ëŠ” ë™ë¬¼ ì¶œë ¥
+				// ÃÊ½Ä (false)ÀÎ Á¶°Ç¿¡ ¸Â´Â µ¿¹° Ãâ·Â
 				printFalseAnimal(animals);
 				break;
 			case 6:
-				// ì „ì²´ ì§ì› ì¶œë ¥ for-each ë¬¸
+				// ÀüÃ¼ Á÷¿ø Ãâ·Â for-each ¹®
 				printAllStaff(staffs);
 				break;
 			case 7:
-				// ì¡°ë ¨ì‚¬ ë‹´ë‹¹ì— ë”°ë¼ ì§ì› ì¶œë ¥
-				// staffs ë°°ì—´ì´ ì •ë ¬í•  ê¸°ì¤€ì„ ì •í•´ì¤Œ
+				// Á¶·Ã»ç ´ã´ç¿¡ µû¶ó Á÷¿ø Ãâ·Â
+				// staffs ¹è¿­ÀÌ Á¤·ÄÇÒ ±âÁØÀ» Á¤ÇØÁÜ
+				// ´ã´ç µ¿¹°ÀÌ ¾øÀ¸¸é null ÀÌ±â ¶§¹®¿¡ NullPointerException ¿¡·¯°¡ ¶á´Ù
+				// °¥ °÷À» ÀÒÀº null »óÈ²ÀÏ ¶§ ¾î¶»°Ô ÇØ¾ßÇÒÁö¸¦ Á¤ÇØÁÖ¸é ÇØ°áµÈ´Ù.
+				// ¿©±â¼­´Â null °ªÀ» ¾ÕÀ¸·Î º¸³»µµ·Ï ±âÁØÀ» Àâ¾Ò´Ù.
+
 				Comparator<Staff> species = new Comparator<Staff>() {
 					@Override
 					public int compare(Staff o1, Staff o2) {
-						return o1.getAnimals().getSpecies().compareTo(o2.getAnimals().getSpecies());
+						if (o1.getAnimals() == null) {
+							return (o2.getAnimals() == null) ? 0 : -1;
+						}
+
+						if (o2.getAnimals() == null) {
+							return 1;
+						}
+
+						else {
+							return o1.getAnimals().getSpecies().compareTo(o2.getAnimals().getSpecies());
+						}
 					}
 				};
 
-				// ê¸°ì¤€ì¸ speciesì— ë”°ë¼ staffs ë°°ì—´ì„ ì •ë ¬
+				// ±âÁØÀÎ species¿¡ µû¶ó staffs ¹è¿­À» Á¤·Ä
 				staffs.sort(species);
 				printAllStaff(staffs);
 				break;
 			case 0:
+				// ÇÁ·Î±×·¥ Á¾·á
 				System.out.println("BYE BYE");
 				on = false;
 				break;
@@ -67,60 +105,70 @@ public class Management {
 		}
 	}
 
-	public void printAllStaff(List<Staff> staffs) {
-		for (Staff print : staffs)
-			System.out.println(print);
+	public void inputAnimal(Management main, List<Animal> animals) {
+		animals.add(new Animal(main.inputAnimalBoolean(), main.inputAnimalSpecies(), main.inputAnimalAge(),
+				main.inputAnimalWeight()));
+		System.out.println("µ¿¹° Ãß°¡ ¿Ï·á");
 	}
 
-	public void printFalseAnimal(List<Animal> animals) {
-		System.out.println("=====ì´ˆì‹ ë™ë¬¼=====");
-		for (int i = 0; i < animals.size(); i++) {
-			if (animals.get(i).isWhatToEat() == false) {
-				System.out.println(animals.get(i));
-			}
-		}
+	public void printAllStaff(List<Staff> staffs) {
+		System.out.println("======================");
+		for (Staff print : staffs)
+			System.out.println(print.toString());
+		System.out.println();
 	}
 
 	public void printTrueAnimal(List<Animal> animals) {
-		System.out.println("=====ìœ¡ì‹ ë™ë¬¼=====");
+		System.out.println("========À°½Ä µ¿¹°========");
 		for (int i = 0; i < animals.size(); i++) {
 			if (animals.get(i).isWhatToEat() == true) {
 				System.out.println(animals.get(i));
 			}
 		}
+		System.out.println();
+	}
+
+	public void printFalseAnimal(List<Animal> animals) {
+		System.out.println("========ÃÊ½Ä µ¿¹°========");
+		for (int i = 0; i < animals.size(); i++) {
+			if (animals.get(i).isWhatToEat() == false) {
+				System.out.println(animals.get(i));
+			}
+		}
+		System.out.println();
 	}
 
 	public static void printMainMenu() {
 		System.out.println("======================");
-		System.out.println("====ë™ë¬¼ì› ê´€ë¦¬ í”„ë¡œê·¸ë¨====");
-		System.out.println("====1.ë™ ë¬¼ === ì¶” ê°€====");
-		System.out.println("====2.ì§ ì› === ì¶” ê°€====");
-		System.out.println("====3.ì „ ì²´ ë™ ë¬¼ ë³´ ê¸°====");
-		System.out.println("====4.ìœ¡ ì‹ ë™ ë¬¼ ë³´ ê¸°====");
-		System.out.println("====5.ì´ˆ ì‹ ë™ ë¬¼ ë³´ ê¸°====");
-		System.out.println("====6.ì „ ì²´ ì§ ì› ì¶œ ë ¥====");
-		System.out.println("====7.ë‹´ ë‹¹ ë™ ë¬¼ ì • ë ¬====");
-		System.out.println("====0.í”„ ë¡œ ê·¸ ë¨ ì¢… ë£Œ====");
+		System.out.println("====µ¿¹°¿ø °ü¸® ÇÁ·Î±×·¥====");
+		System.out.println("====1.µ¿ ¹° === Ãß °¡====");
+		System.out.println("====2.Á÷ ¿ø === Ãß °¡====");
+		System.out.println("====3.Àü Ã¼ µ¿ ¹° º¸ ±â====");
+		System.out.println("====4.À° ½Ä µ¿ ¹° º¸ ±â====");
+		System.out.println("====5.ÃÊ ½Ä µ¿ ¹° º¸ ±â====");
+		System.out.println("====6.Àü Ã¼ Á÷ ¿ø Ãâ ·Â====");
+		System.out.println("====7.´ã ´ç µ¿ ¹° Á¤ ·Ä====");
+		System.out.println("====0.ÇÁ ·Î ±× ·¥ Á¾ ·á====");
 		System.out.println("======================");
 	}
-	
+
 	public String inputString() {
 		Scanner scan = new Scanner(System.in);
 		return scan.nextLine();
 	}
 
 	public String inputStaffName() {
-		System.out.println("ì§ì› ì´ë¦„ ì…ë ¥: ");
+		System.out.print("Á÷¿ø ÀÌ¸§ ÀÔ·Â: ");
 		return inputString();
 	}
 
 	public String inputStaffJob() {
-		System.out.println("ì§ì› ë‹´ë‹¹ ì…ë ¥: ");
+		System.out.print("Á÷¿ø ´ã´ç ÀÔ·Â: ");
 		return inputString();
 	}
 
 	public double inputAnimalWeight() {
-		System.out.println("ë™ë¬¼ ë¬´ê²Œ ì…ë ¥: ");
+		System.out.print("µ¿¹° ¹«°Ô ÀÔ·Â: ");
 		Scanner scan = new Scanner(System.in);
 		double weight = scan.nextDouble();
 		scan.nextLine();
@@ -128,7 +176,7 @@ public class Management {
 	}
 
 	public int inputAnimalAge() {
-		System.out.println("ë™ë¬¼ ë‚˜ì´ ì…ë ¥: ");
+		System.out.print("µ¿¹° ³ªÀÌ ÀÔ·Â: ");
 		Scanner scan = new Scanner(System.in);
 		int age = scan.nextInt();
 		scan.nextLine();
@@ -136,12 +184,12 @@ public class Management {
 	}
 
 	public String inputAnimalSpecies() {
-		System.out.println("ë™ë¬¼ ì´ë¦… ì…ë ¥: ");
+		System.out.print("µ¿¹° Á¾ ÀÔ·Â: ");
 		return inputString();
 	}
 
 	public boolean inputAnimalBoolean() {
-		System.out.println("1. ìœ¡ì‹ === 2. ì´ˆì‹");
+		System.out.print("1. À°½Ä === 2. ÃÊ½Ä");
 		Scanner scan = new Scanner(System.in);
 		if (scan.nextInt() == 1) {
 			return true;

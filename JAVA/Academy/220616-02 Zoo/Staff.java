@@ -1,11 +1,11 @@
 import java.util.Arrays;
-
+	// Staff class (ÇÊµå + ¸Ş¼Òµå) : Á÷¿øÀÇ »óÅÂ¿Í µ¿ÀÛÀ» Á¤ÀÇ
 public class Staff {
-	// ì§ì› ë‹´ë‹¹ (ì¡°ë ¨ì‚¬, ê²½ì˜ ë“±)
+	// Á÷¿ø ´ã´ç (Á¶·Ã»ç, °æ¿µ µî)
 	private String job;
-	// ì§ì› ì´ë¦„
+	// Á÷¿ø ÀÌ¸§
 	private String name;
-	// ì¡°ë ¨ì‚¬ëŠ” ë™ë¬¼ë“¤ì„ ë‹´ë‹¹
+	// Á¶·Ã»ç´Â µ¿¹°µéÀ» ´ã´ç
 	private Animal animal;
 
 	public Staff() {
@@ -69,6 +69,9 @@ public class Staff {
 
 	@Override
 	public String toString() {
-		return "ì§ì› : ë‹´ë‹¹=" + job + ", ì´ë¦„=" + name + ", ë™ë¬¼=" + animal;
+		if (animal == null) {
+			return "Á÷¿ø : ´ã´ç =" + job + ", ÀÌ¸§= " + name + ", ´ã´ç µ¿¹° = ¾øÀ½";
+		} else 
+		return "Á÷¿ø : ´ã´ç= " + job + ", ÀÌ¸§= " + name + ", ´ã´ç µ¿¹°= " + animal;
 	}
 }
