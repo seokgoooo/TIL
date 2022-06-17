@@ -1,11 +1,11 @@
 import java.util.Arrays;
-	// Staff class (ÇÊµå + ¸Ş¼Òµå) : Á÷¿øÀÇ »óÅÂ¿Í µ¿ÀÛÀ» Á¤ÀÇ
+	// Staff class (í•„ë“œ + ë©”ì†Œë“œ) : ì§ì›ì˜ ìƒíƒœì™€ ë™ì‘ì„ ì •ì˜
 public class Staff {
-	// Á÷¿ø ´ã´ç (Á¶·Ã»ç, °æ¿µ µî)
+	// ì§ì› ë‹´ë‹¹ (ì¡°ë ¨ì‚¬, ê²½ì˜ ë“±)
 	private String job;
-	// Á÷¿ø ÀÌ¸§
+	// ì§ì› ì´ë¦„
 	private String name;
-	// Á¶·Ã»ç´Â µ¿¹°µéÀ» ´ã´ç
+	// ì¡°ë ¨ì‚¬ëŠ” ë™ë¬¼ë“¤ì„ ë‹´ë‹¹
 	private Animal animal;
 
 	public Staff() {
@@ -70,8 +70,8 @@ public class Staff {
 	@Override
 	public String toString() {
 		if (animal == null) {
-			return "Á÷¿ø : ´ã´ç =" + job + ", ÀÌ¸§= " + name + ", ´ã´ç µ¿¹° = ¾øÀ½";
+			return "ì§ì› : ë‹´ë‹¹ =" + job + ", ì´ë¦„= " + name + ", ë‹´ë‹¹ ë™ë¬¼ = ì—†ìŒ";
 		} else 
-		return "Á÷¿ø : ´ã´ç= " + job + ", ÀÌ¸§= " + name + ", ´ã´ç µ¿¹°= " + animal;
+		return "ì§ì› : ë‹´ë‹¹= " + job + ", ì´ë¦„= " + name + ", ë‹´ë‹¹ ë™ë¬¼= " + animal;
 	}
 }

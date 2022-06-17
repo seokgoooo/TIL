@@ -3,61 +3,80 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-// Run class : main ¼³°èµµ
+//ë™ë¬¼ì› ê´€ë¦¬
+
+//ë™ë¬¼ - ì¢…, ë‚˜ì´, ë¬´ê²Œ
+
+//ì§ì› - ì—­í• (ì¡°ë ¨ì‚¬, ê²½ì˜ ë“±ë“±), ì´ë¦„
+//ì¡°ë ¨ì‚¬ëŠ” ë™ë¬¼ë“¤ì„ ë‹´ë‹¹í•©ë‹ˆë‹¤.
+
+//ë™ë¬¼ì€ ìœ¡ì‹/ì´ˆì‹ìœ¼ë¡œ ë‚˜ëˆ„ì–´ì„œ ê´€ë¦¬ë©ë‹ˆë‹¤. 
+//ì£¼ì‹ìœ¼ë¡œ ë¶„ë¥˜í•˜ì—¬ ë™ë¬¼ ëª©ë¡ì„ ë³¼ ìˆ˜ ìˆìŒ.
+//ì¡°ë ¨ì‚¬ ë‹´ë‹¹ì— ë”°ë¼ ë™ë¬¼ ëª©ë¡ì„ ë³¼ ìˆ˜ ìˆìŒ. (ë‹´ë‹¹ìê°€ ì—†ëŠ” ë™ë¬¼ë„ ë³¼ ìˆ˜ ìˆì–´ì•¼ í•¨)
+
+// Run class : main ì„¤ê³„ë„
 public class Run {
 	public static void main(String[] args) {
 		Random ran = new Random();
 		Scanner scan = new Scanner(System.in);
 		Management main = new Management();
 
-//		µ¿¹° °´Ã¼ 1°³ ( dog ) »ı¼ºÇÏ´Â ¹æ¹ı
+//		ë™ë¬¼ ê°ì²´ 1ê°œ ( dog ) ìƒì„±í•˜ëŠ” ë°©ë²•
 //		Animal dog = new Animal();
 //		dog.setWhatToEat(ran.nextBoolean());
 //	    dog.setAge((int) (Math.random() * 10));
 //		dog.setSpecies(Double.toString(Math.random() * 10));
 //		dog.setWeight(Math.random() * 20);
 
-		// »ı¼ºÇÑ µ¿¹° °´Ã¼¸¦ ´ãÀ» ¹è¿­ ArrayList ´Â size°¡ °¡º¯ÀûÀÌ¶ó¼­ »ç¿ë
-		// ArrayListÅ¬·¡½º¸¦ ¾´´Ù(import). <Animal> : Animal Å¸ÀÔ¸¸(Animal °´Ã¼¸¸) »ç¿ë °¡´ÉÇÏ´Ù.
-		// ÀÌ ArrayList °´Ã¼¸¦ animals ¶ó´Â ÀÌ¸§¿¡ ÀúÀåÇÑ´Ù.
-		// animals ´Â Animal °´Ã¼µéÀ» ´ãÀ» °´Ã¼ ¹è¿­
+		// ìƒì„±í•œ ë™ë¬¼ ê°ì²´ë¥¼ ë‹´ì„ ë°°ì—´ ArrayList ëŠ” sizeê°€ ê°€ë³€ì ì´ë¼ì„œ ì‚¬ìš©
+		// ArrayList í´ë˜ìŠ¤ë¥¼ ì“´ë‹¤(import). <Animal> : Animal íƒ€ì…ë§Œ(Animal ê°ì²´ë§Œ) ì‚¬ìš© ê°€ëŠ¥í•˜ë‹¤.
+		// ì´ ArrayList ê°ì²´ë¥¼ animals ë¼ëŠ” ì´ë¦„ì— ì €ì¥í•œë‹¤.
+		// animals ëŠ” Animal ê°ì²´ë“¤ì„ ë‹´ì„ ê°ì²´ ë°°ì—´
+		
+//		Animal[] animals = new Animal[10];
+		// ì´ í‘œí˜„ì´ ë¶ˆí¸í•œì§€ ì˜ ìµìˆ™í•˜ì§€ ì•Šì•„ì„œ ê·¸ëŸ°ì§€ ì‚¬ìš©
+		// ListëŠ” ì¸í„°í˜ì´ìŠ¤ ArrayListëŠ” List ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ë˜ìŠ¤
+//		ArrayList<Animal> animals = new ArrayList<Animal>();
+		// ì´ ë¬¸ì¥ì´ë‘ ê°™ì€ ì˜ë¯¸ë¡œ ë´ë„ ë˜ëŠ”ë° DownCasting UpCasting ì´ ë¶€ë¶„ì—ì„œ ì°¨ì´ê°€ ë‚œë‹¤. 
+		// List ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ ë‹¤ë¥¸ í´ë˜ìŠ¤ë“¤ì´ ìˆë‹¤. 
+		// List ì¸í„°í˜ì´ìŠ¤ë¥¼ íƒ€ì…ìœ¼ë¡œ ì“°ë©´ í˜•ë³€í™˜í•  ë•Œ ì¡°ê¸ˆ ë” ìœ ì—°í•˜ê²Œ ì‚¬ìš© ê°€ëŠ¥í•˜ë‹¤
 		List<Animal> animals = new ArrayList<Animal>();
 
-		// (Å×½ºÆ® & ¼³¸í¿ë) »ı¼ºÀÚ¿¡ ³Ö¾îÁÙ ¸Å°³º¯¼ö ÀÌ¸§ Á¤ÀÇ
+		// (í…ŒìŠ¤íŠ¸ & ì„¤ëª…ìš©) ìƒì„±ìì— ë„£ì–´ì¤„ ë§¤ê°œë³€ìˆ˜ ì´ë¦„ ì •ì˜
 		boolean one = ran.nextBoolean();
 		String two = Double.toString(Math.random() * 10);
 		int three = (int) (Math.random() * 10);
 		double four = (int) (Math.random() * 30);
 
-		// (Å×½ºÆ® & ¼³¸í¿ë) animals¿¡ ±âº» µ¿¹° Ãß°¡ ¸Ş¼Òµå
+		// (í…ŒìŠ¤íŠ¸ & ì„¤ëª…ìš©) animalsì— ê¸°ë³¸ ë™ë¬¼ ì¶”ê°€ ë©”ì†Œë“œ
 		basicAnimal(ran, animals, one, two, three, four);
 
-		// Staff °´Ã¼¸¸ ´ãÀ» ¹è¿­ staffs
+		// Staff ê°ì²´ë§Œ ë‹´ì„ ë°°ì—´ staffs
 		List<Staff> staffs = new ArrayList<Staff>();
 
-		// (Å×½ºÆ® & ¼³¸í¿ë) ±âº» Á÷¿ø Ãß°¡ ¸Ş¼Òµå
+		// (í…ŒìŠ¤íŠ¸ & ì„¤ëª…ìš©) ê¸°ë³¸ ì§ì› ì¶”ê°€ ë©”ì†Œë“œ
 		basicStaff(animals, staffs);
 
-		// »õ·Î¿î staff »ı¼º¿¡ ÇÊ¿äÇÑ µ¿¹° ¹è¿­ÀÇ ¸¶Áö¸· ÀÎµ¦½º ¹øÈ£¸¦ ÀúÀåÇÏ´Â º¯¼ö
-		// ¿©±â¼­´Â Å×½ºÆ® ¿ëÀ¸·Î µ¿¹° 2¸¶¸®°¡ »ı¼ºµÇ¾î ÀÖ´Ù.
+		// ìƒˆë¡œìš´ staff ìƒì„±ì— í•„ìš”í•œ ë™ë¬¼ ë°°ì—´ì˜ ë§ˆì§€ë§‰ ì¸ë±ìŠ¤ ë²ˆí˜¸ë¥¼ ì €ì¥í•˜ëŠ” ë³€ìˆ˜
+		// ì—¬ê¸°ì„œëŠ” í…ŒìŠ¤íŠ¸ ìš©ìœ¼ë¡œ ë™ë¬¼ 2ë§ˆë¦¬ê°€ ìƒì„±ë˜ì–´ ìˆë‹¤.
 		int animalIndex = animals.size();
 		
 		main.run(scan, main, animals, staffs, animalIndex);
 	}
 
 	public static void basicStaff(List<Animal> animals, List<Staff> staffs) {
-		staffs.add(new Staff("°æ¿µ", "ÀÌÁ¤Àç", null));
-		staffs.add(new Staff("Á¶·Ã»ç", "°­Çü¿í", animals.get(0)));
-		staffs.add(new Staff("Á¶·Ã»ç", "¾ÆÀÌÀ¯", animals.get(1)));
-		staffs.add(new Staff("ÀÎ»ç", "È²Á¤¹Î", null));
-		staffs.add(new Staff("È«º¸", "±è´Ù¹Ì", null));
+		staffs.add(new Staff("ê²½ì˜", "ì´ì •ì¬", null));
+		staffs.add(new Staff("ì¡°ë ¨ì‚¬", "ê°•í˜•ìš±", animals.get(0)));
+		staffs.add(new Staff("ì¡°ë ¨ì‚¬", "ì•„ì´ìœ ", animals.get(1)));
+		staffs.add(new Staff("ì¸ì‚¬", "í™©ì •ë¯¼", null));
+		staffs.add(new Staff("í™ë³´", "ê¹€ë‹¤ë¯¸", null));
 	}
 
 	public static void basicAnimal(Random ran, List<Animal> animals, boolean one, String two, int three, double four) {
 //		animals.add(new Animal(one, two, three, four));
 //		animals.add(new Animal(ran.nextBoolean(), Double.toString(Math.random() * 10), (int) (Math.random() * 10),
 //				(int) (Math.random() * 30)));
-		animals.add(new Animal(true, "°­¾ÆÁö", 2, 8.8));
-		animals.add(new Animal(false, "±â¸°", 20, 550.88));
+		animals.add(new Animal(true, "ê°•ì•„ì§€", 2, 8.8));
+		animals.add(new Animal(false, "ê¸°ë¦°", 20, 550.88));
 	}
 }

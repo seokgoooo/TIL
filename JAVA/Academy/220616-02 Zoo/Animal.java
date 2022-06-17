@@ -1,12 +1,12 @@
-	// Animal class (ÇÊµå + ¸Ş¼Òµå) : µ¿¹°ÀÇ »óÅÂ¿Í µ¿ÀÛÀ» Á¤ÀÇ
+	// Animal class (í•„ë“œ + ë©”ì†Œë“œ) : ë™ë¬¼ì˜ ìƒíƒœì™€ ë™ì‘ì„ ì •ì˜
 public class Animal {
-	// À°½Ä true, ÃÊ½Ä false
+	// ìœ¡ì‹ true, ì´ˆì‹ false
 	private boolean whatToEat;
-	// µ¿¹° Á¾·ù
+	// ë™ë¬¼ ì¢…ë¥˜
 	private String species;
-	// µ¿¹° ³ªÀÌ
+	// ë™ë¬¼ ë‚˜ì´
 	private int age;
-	// µ¿¹° ¹«°Ô
+	// ë™ë¬¼ ë¬´ê²Œ
 	private double weight;
 
 	public Animal() {
@@ -76,9 +76,9 @@ public class Animal {
 	@Override
 	public String toString() {
 		if (whatToEat == true) {
-			return "[ÁÖ½Ä= À°½Ä" + ", Á¾·ù= " + species + ", ³ªÀÌ= " + age + ", ¹«°Ô= " + weight + "]";
+			return "[ì£¼ì‹= ìœ¡ì‹" + ", ì¢…ë¥˜= " + species + ", ë‚˜ì´= " + age + ", ë¬´ê²Œ= " + weight + "]";
 		} else {
-			return "[ÁÖ½Ä= ÃÊ½Ä" + ", Á¾·ù= " + species + ", ³ªÀÌ= " + age + ", ¹«°Ô= " + weight + "]";
+			return "[ì£¼ì‹= ì´ˆì‹" + ", ì¢…ë¥˜= " + species + ", ë‚˜ì´= " + age + ", ë¬´ê²Œ= " + weight + "]";
 		}
 	}
 }
