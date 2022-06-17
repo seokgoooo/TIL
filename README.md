@@ -4,7 +4,7 @@
 ## Java
 > * 클래스 : 2. 필드 + 메소드 (여기서는 객체 생성은 문장으로 취급해 쓸 수 없다~)
 > * new 인스턴스는 main에서 만들자~
-> * 
+> * https://brunch.co.kr/@cg4jins
 
 ## Git
 > * [markdown 기본 문법](/Git/markdownBasic.md)
