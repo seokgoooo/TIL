@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -52,10 +53,11 @@ public class Management {
 					System.out.println(print);
 				System.out.println();
 
-//		        // for loop
+//		        // for loop 사용법
 //		        for (int i = 0; i < animals.size(); ++i) {
 //		            System.out.print(animals.get(i) + "  ");
 //		        }
+										
 				break;
 			case 4:
 				// 육식 (true)인 조건에 맞는 동물 출력
