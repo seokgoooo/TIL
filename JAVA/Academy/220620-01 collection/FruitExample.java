@@ -32,6 +32,7 @@ public class FruitExample {
 			// 콘솔 입출력
 			switch (button) {
 
+			// case의 상수 같은 경우는 따로 interface를 만들어서 fianl 상수로 적용시켜보자
 			case 1:
 				// 과일 목록 보여주기
 				System.out.println(list);
