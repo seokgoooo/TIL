@@ -16,6 +16,7 @@ public class FruitExample {
 			// 예외 반복문 처리하기
 			while (true) {
 				try {
+					System.out.println();
 					System.out.print("===1. 과일 목록===2. 과일 주기===3. 과일 추가===0. 종료===");
 					button = scan.nextInt();
 				} catch (InputMismatchException e) {
@@ -39,13 +40,10 @@ public class FruitExample {
 			case 2:
 				// 고객에게 과일 주기(제일 앞에거부터 줌)
 				Iterator<String> iterator = list.iterator();
-				if (list.size() > 0) {
+				if (iterator.hasNext()) {		// element가 남아있으면 true, 없으면 false를 반환한다
 					System.out.println(list.get(0) + " 줘");
-					while (iterator.hasNext()) {
-						String str = iterator.next();
-						iterator.remove();
-						break;
-					}
+					iterator.next();			// 다음 element를 반환한다
+					iterator.remove();			// next()로 호출한 element를 삭제한다. next랑 같이 써줘야한다
 					System.out.println(list);
 				} else {
 					System.out.println("매진");
