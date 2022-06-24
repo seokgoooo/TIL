@@ -235,7 +235,6 @@ class ActionCommandTest extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.out.println(e.getActionCommand());
-
 			}
 		};
 		btn1.addActionListener(listener);

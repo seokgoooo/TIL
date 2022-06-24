@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.JCheckBox;
+import java.awt.BorderLayout;
 
 class QuestionFrame extends JFrame {
 	private JButton inputBtn;
