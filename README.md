@@ -54,3 +54,16 @@
 - [ ] 클린 코드(Clean code)
 - [ ] 모던 자바스크립트 Deep Dive
 - [x] 비전공자를 위한 이해할 수 있는 IT 지식
+
+## site
+- https://dololak.tistory.com/category/%EC%9E%90%EB%B0%94%5BJava%5D
+- https://sso-feeling.tistory.com/
+- https://javacan.tistory.com/entry/37
+- https://st-lab.tistory.com/41
+- https://devmoony.tistory.com/category/Programming/Java
+- https://level.goorm.io/
+- https://uxgjs.tistory.com/
+- http://www.kocw.net/home/search/search.do?query=%EA%B0%9D%EC%B2%B4%20%EC%A7%80%ED%96%A5
+- https://wikidocs.net/book/31
+- https://leetcode.com/
+- https://www.acmicpc.net/step
