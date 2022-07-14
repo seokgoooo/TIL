@@ -4,8 +4,8 @@ CREATE TABLE restaurants (
     phone VARCHAR(14) NOT NULL UNIQUE,
     address VARCHAR(100) NOT NULL UNIQUE	-- 주소든 전화번호든 최대한 쪼개놓으면 데이터 활용할 때 편하다 ( 시, 구, 동 등등 )
 );
-INSERT INTO restaurants (name, phone, address) VALUES ("대모골", "051-803-3109", "부산 부산진구 부전로152번길 71")
-, ("도연정", "051-805-0071", "부산 부산진구 새싹로 16");
+INSERT INTO restaurants (name, phone, address) VALUES ("대", "111-222-2222", "시 구 동")
+, ("정", "111-111-1111", "시 구 동");
 SELECT * FROM restaurants;
 DROP TABLE restaurants;
 

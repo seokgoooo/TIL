@@ -1,4 +1,4 @@
--- 집계 함수
+-- 집계 함수 : 한 행을 반환한다.
 SELECT * FROM employees;
 -- count() 안에는 보통 * 을 쓴다. (null 값을 가지는 데이터가 있으면 count에 영향을 준다.)
 SELECT count(*) FROM employees;
