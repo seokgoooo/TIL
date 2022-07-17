@@ -67,3 +67,5 @@
 - https://wikidocs.net/book/31
 - https://leetcode.com/
 - https://www.acmicpc.net/step
+- 빅분기 준비
+- http://dwarfintheflask.xyz/17
