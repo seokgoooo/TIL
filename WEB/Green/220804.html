@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>방가방가</p>
+    <button id="mybtn">눌러봐</button>
+    <input id="mytext" value="test 값" />
+    <button id="printbtn">콘솔 출력하기</button>
+    <button id="move">이동하기</button>
+    <div id="mydiv"></div>
+    <button id="changebtn">텍스트값 변경하기</button>
+    <button id="color">색깔 변경하기</button>
+
+    <button id="start">시작</button>
+    <div id="time"></div>
+</body>
+<script>
+
+    setTimeout(function () {
+        console.log("3초 후에 출력");
+    }, 3000);
+
+    // var number = 0;
+    // setInterval(() => {
+    //     number++;
+    //     console.log(number);
+    // }, 1000);
+
+    // 버튼을 누르면 0부터 시작하는 스탑워치 (정지없어도됨) 만들어보자
+    let startbtn = document.getElementById("start");
+    let time = document.getElementById("time");
+
+    startbtn.addEventListener("click", function (e) {
+        let number = 0;
+        time.innerText = "";
+        setInterval(() => {
+            time.innerText = number;
+            number++;
+        }, 1000)
+    });
+    // clearInterval (동일한 함수 참조) - 정지를 만들어보려면
+
+    document.getElementById("move").addEventListener("click", function (e) {
+        if (confirm("네이버로 이동하시겠습니까?")) {
+            window.location.href = "http://www.naver.com";
+        }
+    });
+
+    let mydiv = document.getElementById("mydiv");
+    let changebtn = document.getElementById("changebtn");
+    let colorbtn = document.getElementById("color");
+
+    changebtn.addEventListener("click", function (e) {
+        mydiv.innerHTML = "<strong>텍스트값을 변경하였습니다.</strong>";
+    });
+
+    colorbtn.addEventListener("click", function (e) {
+        mydiv.classList.toggle("red");
+    });
+
+    function myListener(e) {
+        alert("왜 누르니?");
+        console.log(e);
+    }
+
+    // mybtn.onclick = myListener;
+    let elem = document.getElementById("mybtn");
+    elem.addEventListener("click", myListener);
+
+    let inputText = document.getElementById("mytext");
+
+    // text 입력 요소, button 요소를 배치하고 사용자가 입력한 내용을 콘솔 출력하기
+    let printbtn = document.getElementById("printbtn");
+    printbtn.addEventListener("click", function (e) {
+        console.log(inputText.value);
+    });
+
+    // callback 함수
+    //  함수가 하나의 객체로 존재하기 때문에 parameter로 전달이 가능하다
+    function eat(act) {
+        console.log("밥 먹구");
+        act();
+    }
+
+    let sleep = function () {
+        console.log("잠 자기");
+    }
+
+    let study = function () {
+        console.log("공부하기");
+    }
+
+    eat(sleep);
+    eat(study);
+
+    let anotherName = eat;
+    anotherName(sleep);
+
+    // js에서는 변수에 타입이 없기 때문에 밑에 같은 함수는 만들지마라 (타입 꼬이면 답이 없어짐)
+    function sum(a, b) {
+        if (a > b) {
+            return a + b;
+        } else {
+            return "b가 a보다 큽니다";
+        }
+    }
+    let result = sum(10, 20);
+    console.log(result);
+
+    // 함수에 아무것도 없거나 return 값이 없으면 undefined를 반환한다.
+    function someFunc() {
+
+    }
+    let someResult = someFunc();
+    console.log(someResult);
+
+    // 함수를 나타내는 function 표현 대신에 => 이걸 써서 함수로 나타낼 수 있다.
+    // 화살표 함수
+    let arrowFunc = (x) => {
+        console.log(x);
+    }
+    arrowFunc("test arrow");
+
+    let say = () => {
+        console.log("say");
+        return "반환값";
+    }
+    console.log(say());
+
+    let multiply = (a, b) => a * b;
+    let m = multiply(10, 5);
+    console.log(m);
+
+    // arguments ~ parameter arrays
+
+    function params() {
+        for (let i = 0; i < arguments.length; i++) {
+            console.log(arguments[i]);
+        }
+    }
+
+    function paramsum() {
+        let sum = 0;
+        for (let i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+        console.log(sum);
+    }
+
+    params(1, 2, 3, 4, 5, 6, 7, 8, 9);
+    paramsum(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+    function testDefault(a = 10) {
+        console.log(a);
+    }
+
+    testDefault(100);
+    testDefault();
+
+    let myFunc = function (a, b) {
+        console.log(a + b);
+    }
+    myFunc(10, 15);
+
+    hello("홍길동");
+
+    function hello(name) {
+        console.log(name + "님 안뇽");
+    }
+
+    hello(0);
+
+    hello(true);
+
+    hello();
+
+    hello("a", "b", "c");
+</script>
+
+</html>
