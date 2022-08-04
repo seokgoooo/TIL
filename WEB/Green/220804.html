@@ -42,15 +42,17 @@
     let startbtn = document.getElementById("start");
     let time = document.getElementById("time");
 
+    var number = 0;
+    var intervalId = setInterval(() => {
+        time.innerText = number;
+        number++;
+    }, 1000);
+
     startbtn.addEventListener("click", function (e) {
-        let number = 0;
-        time.innerText = "";
-        setInterval(() => {
-            time.innerText = number;
-            number++;
-        }, 1000)
+        number = 0;
+        intervalId = setInterval(intervalId, 1000);
     });
-    // clearInterval (동일한 함수 참조) - 정지를 만들어보려면
+    // clearInterval (intervalId) - 정지를 만들어보려면
 
     document.getElementById("move").addEventListener("click", function (e) {
         if (confirm("네이버로 이동하시겠습니까?")) {
