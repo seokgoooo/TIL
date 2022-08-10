@@ -1,0 +1,28 @@
+<!-- 
+	페이지 이동을 제공하는 index.html 작성
+	
+	a. 사람 등록 페이지(입력 양식 제공)
+		-> action = mapping된 servlet (O)
+		-> service 메소드 {	(O)
+			db 행을 추가
+			redirect 응답 (사람 목록 페이지)
+		}
+	b. 사람 목록 페이지
+		-> mapping된 servlet	(O)
+		-> service 메소드 {
+			db 목록 읽기
+			forward 사람 목록을 볼 수 있는(view) jsp로
+		}
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="./insert.jsp">사람 등록 페이지</a>
+	<a href="./view">사람 목록 페이지</a>
+</body>
+</html>
