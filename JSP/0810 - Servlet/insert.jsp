@@ -5,16 +5,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>입력 폼</title>
 </head>
 <body>
-	<form action="${ pageContext.request.contextPath }/insert">
-		<input type="text" name="firstName" />
-		<input type="text" name="lastName" />
-		<input type="number" name="age" />
-		<input type="text" name="mail" />
-		
-		<input type="submit" />
+	<form action="${ pageContext.request.contextPath }/insert"
+		method="post">
+		<input type="text" name="firstName" /> <input type="text"
+			name="lastName" /> <input type="number" name="age" /> <input
+			type="text" name="mail" /> <input type="submit" />
+
+		<c:if test="${ not empty errors }">
+			<div>
+				<c:forEach var="message" items="${ errors }">
+					<p>${ message.value }</p>
+				</c:forEach>
+			</div>
+		</c:if>
+
 	</form>
 </body>
 </html>
