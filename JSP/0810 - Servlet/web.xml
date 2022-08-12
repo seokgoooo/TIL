@@ -13,6 +13,11 @@
 	<servlet>
 		<servlet-name>HelloServlet</servlet-name>
 		<servlet-class>hello.HelloServlet</servlet-class>
+		<init-param>
+		<param-name>paramname1</param-name>
+		<param-value>paramvalue1</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
 	</servlet>
 
 	<servlet-mapping>
