@@ -45,8 +45,7 @@ public class ModifyArticleHandler implements CommandHandler {
 				return null;
 			}
 
-			ModifyRequest modReq = new ModifyRequest(authUser.getId(), no,
-					articleData.getArticle().getTitle(),
+			ModifyRequest modReq = new ModifyRequest(authUser.getId(), no, articleData.getArticle().getTitle(),
 					articleData.getContent());
 			req.setAttribute("modReq", modReq);
 			return FORM_VIEW;
@@ -62,23 +61,23 @@ public class ModifyArticleHandler implements CommandHandler {
 	}
 
 	private String processSubmit(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		User authUser = (User) req.getSession().getAttribute("authUser");
-		String noVal = req.getParameter("no");
-		int no = Integer.parseInt(noVal);
-
-		ModifyRequest modReq = new ModifyRequest(authUser.getId(), no,
-				req.getParameter("title"),
-				req.getParameter("content"));
-		req.setAttribute("modReq", modReq);
-
 		Map<String, Boolean> errors = new HashMap<String, Boolean>();
 		req.setAttribute("errors", errors);
+
+		User authUser = (User) req.getSession(false).getAttribute("authUser");
+		String noVal = req.getParameter("no");
+		int no = Integer.parseInt(noVal);
+		ModifyRequest modReq = new ModifyRequest(authUser.getId(), no, req.getParameter("title"),
+				req.getParameter("content"));
 		modReq.validate(errors);
+
 		if (!errors.isEmpty()) {
 			return FORM_VIEW;
 		}
+
 		try {
 			modifyService.modify(modReq);
+			req.setAttribute("modReq", modReq);
 			return "/WEB-INF/view/modifySuccess.jsp";
 		} catch (ArticleNotFoundException e) {
 			res.sendError(HttpServletResponse.SC_NOT_FOUND);

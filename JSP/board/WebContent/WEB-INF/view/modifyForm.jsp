@@ -10,7 +10,8 @@
 <body>
 	<form action="modify.do" method="post">
 		<p>
-			번호:<br />${ modReq.articleNumber }
+			번호:<br /> <input type="text" name="no"
+				value="${ modReq.articleNumber }" readonly="readonly">
 		</p>
 		<p>
 			제목:<br /> <input type="text" name="title" value="${ modReq.title }">

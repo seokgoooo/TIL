@@ -40,16 +40,16 @@ public class WriteArticleHandler implements CommandHandler {
 		WriteRequest writeReq = createWriteRequest(user, req);
 		writeReq.validate(errors);
 
+		int newArticleNo = writeService.write(writeReq);
+		req.setAttribute("newArticleNo", newArticleNo);
+
 		if (!errors.isEmpty()) {
 			return FORM_VIEW;
 		}
 
-		int newArticleNo = writeService.write(writeReq);
-		req.setAttribute("newArticleNo", newArticleNo);
-
 		return "/WEB-INF/view/newArticleSuccess.jsp";
 	}
-	
+
 	private WriteRequest createWriteRequest(User user, HttpServletRequest req) {
 		return new WriteRequest(new Writer(user.getId(), user.getName()), req.getParameter("title"),
 				req.getParameter("content"));
