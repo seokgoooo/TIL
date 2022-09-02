@@ -4,13 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>form</title>
+<title>유저 목록</title>
 </head>
 <body>
-
-	<form method="POST">
-		<input type="text" name="text" /> <input type="submit">
-	</form>
-
+	<p>${ list }</p>
 </body>
 </html>
