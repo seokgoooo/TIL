@@ -69,5 +69,21 @@
 - https://wikidocs.net/book/31
 - https://leetcode.com/
 - https://www.acmicpc.net/step
+- https://velog.io/@josworks27/series/TILToday-I-Learned
+- https://aws.amazon.com/ko/blogs/korea/what-happens-when-you-type-a-url-into-your-browser/
+- https://velog.io/@sham
+- https://lena-chamna.netlify.app/post/http_multipart_form-data/
+- https://xzio.tistory.com/484?category=845469
+- https://myjamong.tistory.com/154
+- https://itstudyroom.tistory.com/entry/MVC2-%EA%B2%8C%EC%8B%9C%ED%8C%90-4-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C
+- https://velog.io/@hyeon4137
+- https://www.codingfactory.net/mariadb-tutorial-table-of-contents
+- https://7942yongdae.tistory.com/86
+- https://velog.io/@bining/%EC%9D%B8%EC%8A%A4%ED%83%80-%EC%8A%A4%ED%82%A4%EB%A7%88-%EB%94%94%EC%9E%90%EC%9D%B8
+- https://velog.io/@rorohyun132/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%8B%B8%EC%9D%B4%EC%9B%94%EB%93%9C-%EA%B0%90%EC%84%B1%EC%9D%98-%EC%BB%A4%ED%94%8Csns-%EB%B0%8F-%EC%87%BC%ED%95%91%EB%AA%B0#%ED%8E%98%EC%9D%B4%EC%A7%80%EB%B3%84--%EC%84%A4%EB%AA%85-react
+- https://multifrontgarden.tistory.com/97
+- https://laycoder.tistory.com/109?category=846100
+- https://devfolio.kr/
+- 
 - 빅분기 준비
 - http://dwarfintheflask.xyz/17
