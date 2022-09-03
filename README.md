@@ -84,6 +84,6 @@
 - https://multifrontgarden.tistory.com/97
 - https://laycoder.tistory.com/109?category=846100
 - https://devfolio.kr/
-- 
+- https://euncho.medium.com/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EC%84%B1%EC%9E%A5-%EA%B0%80%EB%8A%A5%EC%84%B1%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%B8%A1%EC%A0%95-%EA%B0%80%EB%8A%A5%ED%95%9C%EA%B0%80-238dd3f0f33
 - 빅분기 준비
 - http://dwarfintheflask.xyz/17
