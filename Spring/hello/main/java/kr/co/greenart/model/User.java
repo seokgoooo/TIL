@@ -6,6 +6,7 @@ import javax.validation.constraints.Size;
 import javax.validation.constraints.NotBlank;
 
 public class User {
+	private int id;
 //	 hibernate-validator 를 maven에 추가해 유효성검사도 annotation으로 해결 가능하다.
 	@NotBlank(message = "이름을 입력해주세요")
 	@Size(min = 1, max = 4, message = "이름은 1 ~ 4자 사이여야합니다.")
@@ -20,6 +21,13 @@ public class User {
 
 	public User(String name, int age) {
 		super();
+		this.name = name;
+		this.age = age;
+	}
+
+	public User(int id, String name, int age) {
+		super();
+		this.id = id;
 		this.name = name;
 		this.age = age;
 	}
