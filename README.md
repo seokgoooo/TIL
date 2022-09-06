@@ -1,5 +1,4 @@
 # TIL (Today I Learned)
-- 정리중입니다~
 - 프로젝트 진행시 변수 상황? 이 생길때 어떻게 대처해야 좋을지 생각을 해둘 필요가 있을듯....
 - 변수 때문에 예상 개발기간을 2배로 잡는다고 하는데 일리가 있는 말이다
 
@@ -86,5 +85,6 @@
 - https://devfolio.kr/
 - https://euncho.medium.com/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EC%84%B1%EC%9E%A5-%EA%B0%80%EB%8A%A5%EC%84%B1%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%B8%A1%EC%A0%95-%EA%B0%80%EB%8A%A5%ED%95%9C%EA%B0%80-238dd3f0f33
 - https://brunch.co.kr/@jihyun-um/39
+- https://yozm.wishket.com/magazine/detail/1585/
 - 빅분기 준비
 - http://dwarfintheflask.xyz/17
