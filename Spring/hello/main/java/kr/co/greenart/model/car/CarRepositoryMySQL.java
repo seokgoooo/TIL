@@ -14,12 +14,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@Primary
+//@Primary
 public class CarRepositoryMySQL implements CarRepository {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	private CarRowMapper mapper = new CarRowMapper();
 
+//	이렇게 하나씩 꺼내는 작업을 줄이는 과정은 -> CarRepositoryNamed로 이동
 	private class CarRowMapper implements RowMapper<Car> {
 		@Override
 		public Car mapRow(ResultSet rs, int rowNum) throws SQLException {
