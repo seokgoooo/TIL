@@ -1,6 +1,7 @@
 # TIL (Today I Learned)
 - '##'을 하나씩 떼서 레포 정리를 천천히 해보자
 - 개발자는 실력을 키우는게 답이다
+- 할일 : 이력서 초안 마무리, 레포 정리
 
 ## 느낀점
 - 프로젝트 진행시 변수 상황? 이 생길때 어떻게 대처해야 좋을지 생각을 해둘 필요가 있을듯....
@@ -115,5 +116,6 @@
 - https://euncho.medium.com/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EC%84%B1%EC%9E%A5-%EA%B0%80%EB%8A%A5%EC%84%B1%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%B8%A1%EC%A0%95-%EA%B0%80%EB%8A%A5%ED%95%9C%EA%B0%80-238dd3f0f33
 - https://brunch.co.kr/@jihyun-um/39
 - https://yozm.wishket.com/magazine/detail/1585/
+- https://yozm.wishket.com/magazine/detail/1555/
 - 빅분기 준비
 - http://dwarfintheflask.xyz/17
