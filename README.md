@@ -117,5 +117,6 @@
 - https://brunch.co.kr/@jihyun-um/39
 - https://yozm.wishket.com/magazine/detail/1585/
 - https://yozm.wishket.com/magazine/detail/1555/
+- https://jang-sn.tistory.com/4?category=953765
 - 빅분기 준비
 - http://dwarfintheflask.xyz/17
