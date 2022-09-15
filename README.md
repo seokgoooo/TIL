@@ -120,3 +120,4 @@
 - https://jang-sn.tistory.com/4?category=953765
 - 빅분기 준비
 - http://dwarfintheflask.xyz/17
+모든 data는 binary data (이진)
