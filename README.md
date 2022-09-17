@@ -121,4 +121,5 @@
 - 빅분기 준비
 - http://dwarfintheflask.xyz/17
 - https://steady-coding.tistory.com/
+- https://tech.kakao.com/2020/07/22/recruit-kakaotalk-backend/
 모든 data는 binary data (이진)
