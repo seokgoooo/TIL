@@ -122,4 +122,5 @@
 - http://dwarfintheflask.xyz/17
 - https://steady-coding.tistory.com/
 - https://tech.kakao.com/2020/07/22/recruit-kakaotalk-backend/
+- https://jojoldu.tistory.com/661
 모든 data는 binary data (이진)
