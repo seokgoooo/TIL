@@ -1,11 +1,6 @@
 # TIL (Today I Learned)
 - '##'을 하나씩 떼서 레포 정리를 천천히 해보자
-- 개발자는 실력을 키우는게 답이다
-- 할일 : 이력서 초안 마무리, 레포 정리
-
-## 느낀점
-- 프로젝트 진행시 변수 상황? 이 생길때 어떻게 대처해야 좋을지 생각을 해둘 필요가 있을듯....
-- 변수 때문에 예상 개발기간을 2배로 잡는다고 하는데 일리가 있는 말이다
+- 할일 : 강의 마무리, 레포 정리, 자료구조 공부
 
 ## Java
 > * 자바 가상 기계 (JVM / Java Virtual Machine) : 자바 프로그램은 완전한 기계어가 아닌 중간 단계의 바이트 코드이기 때문에, 이것을 해석하고 실행할 수 있게 해주는 가상의 운영체제
@@ -118,9 +113,8 @@
 - https://yozm.wishket.com/magazine/detail/1585/
 - https://yozm.wishket.com/magazine/detail/1555/
 - https://jang-sn.tistory.com/4?category=953765
-- 빅분기 준비
-- http://dwarfintheflask.xyz/17
 - https://steady-coding.tistory.com/
 - https://tech.kakao.com/2020/07/22/recruit-kakaotalk-backend/
 - https://jojoldu.tistory.com/661
+
 모든 data는 binary data (이진)
