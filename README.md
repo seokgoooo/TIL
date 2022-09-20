@@ -37,19 +37,20 @@
 > * [markdown 기본 문법](/Git/markdownBasic.md)
 > * 커밋(Commit) **신중하게** 의미있는것만! 설명 꼭 달아서!!
 
+## OOP (Object Oriented Programming)
+1. 객체의 구성으로 프로그램을 만들어 가는 것
+2. 객체지향의 원칙 : SOLID
+* 코드의 재사용성 & 유지보수성 UP
+  * Single responsibility principle : 단일 책임 원칙
+  * Open-closed principle : 개방 폐쇄 원칙
+  * Liskov substitution principle : 리스코프 치환 원칙
+  * Interface segregation principle : 인터페이스 분리 법칙
+  * Dependency inversion principle : 의존관계 역전 법칙
+
 ## :egg: 완성되면 >>> :fried_egg: 로 나간다
-* OOP (Object Oriented Programming)
 * [ ] 백준 문제 풀이 100
 * [ ] 내가 만들고 싶은 앱, 웹
 * https://brunch.co.kr/@cg4jins
-
-## CS 6대 과목
-1. 자료구조
-2. 알고리즘
-3. 컴퓨터구조
-4. 운영체제
-5. 네트워크
-6. 데이터베이스
 
 ## 코테
 * 자료구조
