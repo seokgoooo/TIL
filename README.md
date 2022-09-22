@@ -82,20 +82,17 @@
 - [ ] 누워서 읽는 알고리즘
 - [ ] 자바로 배우는 쉬운 자료구조
 
-## site
-- https://dololak.tistory.com/category/%EC%9E%90%EB%B0%94%5BJava%5D
-- https://sso-feeling.tistory.com/
-- https://javacan.tistory.com/entry/37
-- https://st-lab.tistory.com/41
+## ite
+- [도로락님] (https://dololak.tistory.com/)
+- [뇌 채우기 공간] (https://sso-feeling.tistory.com/)
+- [자바캔] (https://javacan.tistory.com/)
+- [st-lab] (https://st-lab.tistory.com/)
 - https://devmoony.tistory.com/category/Programming/Java
 - https://level.goorm.io/
 - https://uxgjs.tistory.com/
-- http://www.kocw.net/home/search/search.do?query=%EA%B0%9D%EC%B2%B4%20%EC%A7%80%ED%96%A5
 - https://wikidocs.net/book/31
 - https://leetcode.com/
-- https://www.acmicpc.net/step
 - https://velog.io/@josworks27/series/TILToday-I-Learned
-- https://aws.amazon.com/ko/blogs/korea/what-happens-when-you-type-a-url-into-your-browser/
 - https://velog.io/@sham
 - https://lena-chamna.netlify.app/post/http_multipart_form-data/
 - https://xzio.tistory.com/484?category=845469
@@ -118,4 +115,9 @@
 - https://tech.kakao.com/2020/07/22/recruit-kakaotalk-backend/
 - https://jojoldu.tistory.com/661
 - https://velog.io/@city7310/%EB%B0%B1%EC%97%94%EB%93%9C%EA%B0%80-%EC%9D%B4%EC%A0%95%EB%8F%84%EB%8A%94-%ED%95%B4%EC%A4%98%EC%95%BC-%ED%95%A8-1.-%EC%BB%A8%ED%85%90%EC%B8%A0%EC%9D%98-%EB%8F%99%EA%B8%B0%EC%99%80-%EA%B0%9C%EC%9A%94
-모든 data는 binary data (이진)
+- [자바 스프링 공부 Bluesky_님] (https://luvstudy.tistory.com/category/Study/Java)
+- [비전공자 ruckus님] (https://ruckus.tistory.com/)
+- [무니의 개발로그] (https://devmoony.tistory.com/)
+- [KOCW 객체지향 강의] (http://www.kocw.net/home/search/search.do?query=%EA%B0%9D%EC%B2%B4%20%EC%A7%80%ED%96%A5)
+- [IT기술 과거글 정리] (https://blog.naver.com/myca11)
+- [SQL 연습] (https://sqlzoo.net/wiki/SQL_Tutorial)
