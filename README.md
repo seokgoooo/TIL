@@ -22,7 +22,7 @@
 > * 트랜잭션 - 로직이 처음부터 끝까지 완료되어야 하는 작업(과정)? ex) 구매과정
 
 > API (Application Programming Interface) : 프로그램들이 서로 상호작용하는 것들 도와주는 매개체. 서버와 DB에 대한 출입구 역할. 애플리케이션과 기기가 원활하게 통신할 수 있도록 도와준다. 모든 네트워크 접속을 표준화하는 역할. 이러한 표준화 과정을 통해 개발과정을 간소화시키고 개발자들 간 협업을 용이하게 한다.
-
+> * RESTful API : HTTP 통신에서 어떤 차원에 대한 CRUD 요청을 Resource와 Method로 표현하여 특정한 형태로 전달하는 방식. Resource (자원, URI), Method (요청 방식, GET or POST 등), Representation of Resource (자원의 형태, JSON or XML 등) 으로 구성된다
 > * 쿠키 vs 세션
 >   * 모두 인증방식 중 하나에 해당 된다.
 >   * 둘의 가장 큰 차이는 정보가 저장되는 위치 쿠키 - 클라이언트 / 세션 - 서버
