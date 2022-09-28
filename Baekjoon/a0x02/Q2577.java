@@ -1,3 +1,5 @@
+package a0x02;
+
 import java.util.Scanner;
 
 public class Q2577 {
@@ -9,13 +11,13 @@ public class Q2577 {
 		int result = a * b * c;
 		int num = 0;
 		int[] count = new int[10];
-		
-		while ( result > 0 ) {
+
+		while (result > 0) {
 			num = result % 10;
 			count[num]++;
 			result = result / 10;
 		}
-		
+
 		for (int i = 0; i < count.length; i++) {
 			System.out.println(count[i]);
 		}

@@ -3,28 +3,23 @@ import java.util.Scanner;
 public class Q3052 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-
-		int[] input = new int[10];
 		int[] result = new int[10];
 		int count = 0;
 
-		for (int i = 0; i < input.length; i++) {
-			input[i] = scan.nextInt();
-			result[i] = input[i] % 42;
-		}
-
 		for (int i = 0; i < result.length; i++) {
-			for (int j = 0; j < result.length; j++) {
-				if (i != j) {
-					if (result[i] == result[j]) {
-						count++;
-					} else {
-						continue;
-					}
+			result[i] = scan.nextInt() % 42;
+		}
+		for (int i = 0; i < result.length; i++) {
+			int temp = -1;
+			for (int j = i; j < result.length; j++) {
+				if (result[i] == result[j]) {
+					temp++;
 				}
 			}
+			if (temp == 0) {
+				count++;
+			}
 		}
-
 		System.out.println(count);
 	}
 }

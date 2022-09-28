@@ -1,3 +1,5 @@
+package a0x02;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -9,19 +11,19 @@ public class Q15552 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 //		String s = bf.readLine();	String 타입
-		int T = Integer.parseInt(br.readLine()); 	// int 타입
-		
+		int T = Integer.parseInt(br.readLine()); // int 타입
+
 		StringTokenizer st;
-		
+
 		for (int i = 1; i <= T; i++) {
-			st = new StringTokenizer(br.readLine()," ");
+			st = new StringTokenizer(br.readLine(), " ");
 			bw.write((Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken())) + "\n");
 		}
-			br.close();
-			
-			bw.flush();
-			bw.close();
+		br.close();
+
+		bw.flush();
+		bw.close();
 	}
 }
