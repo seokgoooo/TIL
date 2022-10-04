@@ -130,3 +130,4 @@
 - https://preamtree.tistory.com/
 - https://medium.com/@totuworld/%ED%86%A0%EC%9D%B4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%A3%BC%EB%8F%84-%ED%95%99%EC%8A%B5-%EC%84%B1%EC%9E%A5-94fc304984b0
 - [자료구조~] https://hanamon.kr/category/data-structure-algorithm/
+- [코테 준비 방법] https://dogfootja.tistory.com/20?category=1028577
