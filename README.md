@@ -1,5 +1,6 @@
 # TIL (Today I Learned)
 - 정리중입니다~
+- 카카오야 어디까지 가니???
 
 ## Java
 > * 자바 가상 기계 (JVM / Java Virtual Machine) : 자바 프로그램은 완전한 기계어가 아닌 중간 단계의 바이트 코드이기 때문에, 이것을 해석하고 실행할 수 있게 해주는 가상의 운영체제
@@ -34,16 +35,6 @@
 > * [markdown 기본 문법](/Git/markdownBasic.md)
 > * 커밋(Commit) **신중하게** 의미있는것만! 설명 꼭 달아서!!
 
-## OOP (Object Oriented Programming)
-1. 객체의 구성으로 프로그램을 만들어 가는 것
-2. 객체지향의 원칙 : SOLID
-* 코드의 재사용성 & 유지보수성 UP
-  * Single responsibility principle : 단일 책임 원칙
-  * Open-closed principle : 개방 폐쇄 원칙
-  * Liskov substitution principle : 리스코프 치환 원칙
-  * Interface segregation principle : 인터페이스 분리 법칙
-  * Dependency inversion principle : 의존관계 역전 법칙
-
 ## :egg: 완성되면 >>> :fried_egg: 로 나간다
 * [ ] 백준 문제 풀이 100
 * [ ] 내가 만들고 싶은 앱, 웹
@@ -59,7 +50,7 @@
 - [ ] 누워서 읽는 알고리즘
 - [ ] 자바로 배우는 쉬운 자료구조
 
-## ite
+## Site
 - [도로락님] (https://dololak.tistory.com/)
 - [뇌 채우기 공간] (https://sso-feeling.tistory.com/)
 - [자바캔] (https://javacan.tistory.com/)
