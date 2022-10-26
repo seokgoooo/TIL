@@ -34,6 +34,18 @@
 > 2. 데이터를 매우 빠르게 찾을 수 있게 도와준다.
 > (기본키를 설정하면 DBMS는 인덱스를 만든다)
 
+## Javascript
+* Boolean 변환표
+
+|자료형|True|False|
+|:--|:--:|:--:|
+|Boolean|True|False|
+|String|""을 제외한 모든 값|""일 때|
+|Number|0 보다 큰 모든 수|0 or NaN|
+|Object|null 을 제외한 모든 object|null|
+|Undefined|해당 사항 없음|undefined|
+|Null|해당 사항 없음|null|
+
 ## Git
 > * [markdown 기본 문법](/Git/markdownBasic.md)
 > * 커밋(Commit) **신중하게** 의미있는것만! 설명 꼭 달아서!!
