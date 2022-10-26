@@ -46,6 +46,14 @@
 |Undefined|해당 사항 없음|undefined|
 |Null|해당 사항 없음|null|
 
+* !! 연산자는 Boolean 타입으로 명시적으로 형변환해주기 위해 사용한다.
+
+## Typescript
+1. Enum
+2. this로 자기자신을 참조하는 방법
+3. readonly
+4. 타입을 엄격하게 선언해주는편이 좋은게 아닌가 하는 생각 (catch의 e에 any 타입 명시)
+
 ## Git
 > * [markdown 기본 문법](/Git/markdownBasic.md)
 > * 커밋(Commit) **신중하게** 의미있는것만! 설명 꼭 달아서!!
