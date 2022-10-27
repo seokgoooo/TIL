@@ -48,11 +48,16 @@
 
 * !! 연산자는 Boolean 타입으로 명시적으로 형변환해주기 위해 사용한다.
 
+1. let : 값 재할당 가능
+2. const : 값 재할당 불가능
+3. var : 거의 쓰지 않는 문법 (구버전)
+
 ## Typescript
 1. Enum
 2. this로 자기자신을 참조하는 방법
 3. readonly
 4. 타입을 엄격하게 선언해주는편이 좋은게 아닌가 하는 생각 (catch의 e에 any 타입 명시)
+5. as 문법 : 타입 표명 (Type Assertion) 이라고 한다. 프로그래머가 컴파일러에게 이 타입이라고 명시해주는 것. 되도록 사용이 권장되지는 않는다. 선언해준다고해서 타입이 반드시 보장되지 않는다. typeof, instanceof 등으로 타입가드를 해줄 수도 있다.
 
 ## Git
 > * [markdown 기본 문법](/Git/markdownBasic.md)
