@@ -52,12 +52,21 @@
 2. const : 값 재할당 불가능
 3. var : 거의 쓰지 않는 문법 (구버전)
 
+1. npm : readline-sync 라이브러리
+    * keyIn : ( Yes / No ) 를 입력받아야할 때 사용
+    * 이외에도 email, phoneNumber 등 사용자의 입력을 비동기로 처리하고 싶을 때 유용한 방법이 많다.
+2. this 는 가리키는 것이 많다. 잘 파악할 줄 알아야 할 듯
+
 ## Typescript
 1. Enum
 2. this로 자기자신을 참조하는 방법
 3. readonly
 4. 타입을 엄격하게 선언해주는편이 좋은게 아닌가 하는 생각 (catch의 e에 any 타입 명시)
 5. as 문법 : 타입 표명 (Type Assertion) 이라고 한다. 프로그래머가 컴파일러에게 이 타입이라고 명시해주는 것. 되도록 사용이 권장되지는 않는다. 선언해준다고해서 타입이 반드시 보장되지 않는다. typeof, instanceof 등으로 타입가드를 해줄 수도 있다.
+6. null vs undefined
+    * 둘 다 값이 '없는 상태'를 말한다.
+    * null 은 null 타입이라고 명시해주는 것.
+    * undefined 는 타입도 명확하지 않은 상태.
 
 ## Git
 > * [markdown 기본 문법](/Git/markdownBasic.md)
