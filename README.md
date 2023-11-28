@@ -1,9 +1,6 @@
 # TIL (Today I Learned)
-- 정리중입니다~
-- 중요한 것은 재미, 흥미를 유지하면서 일을 지속하는 것
+- 재미, 흥미를 유지하면서 일을 지속하는 것
 - 하다 보면 그냥 하게 된다.
-- 어떤 기술을 쓰던 관심 있었던 서비스를 만들어보자
-- Intellij, Typescript, Node.js ing...
 
 ## Java
 > * 자바 가상 기계 (JVM / Java Virtual Machine) : 자바 프로그램은 완전한 기계어가 아닌 중간 단계의 바이트 코드이기 때문에, 이것을 해석하고 실행할 수 있게 해주는 가상의 운영체제
@@ -39,56 +36,10 @@
 > 2. 데이터를 매우 빠르게 찾을 수 있게 도와준다.
 > (기본키를 설정하면 DBMS는 인덱스를 만든다)
 
-## Javascript
-* Boolean 변환표
-
-|자료형|True|False|
-|:--|:--:|:--:|
-|Boolean|True|False|
-|String|""을 제외한 모든 값|""일 때|
-|Number|0 보다 큰 모든 수|0 or NaN|
-|Object|null 을 제외한 모든 object|null|
-|Undefined|해당 사항 없음|undefined|
-|Null|해당 사항 없음|null|
-
-* !! 연산자는 Boolean 타입으로 명시적으로 형변환해주기 위해 사용한다.
-
-1. let : 값 재할당 가능
-2. const : 값 재할당 불가능
-3. var : 거의 쓰지 않는 문법 (구버전)
-
-1. npm : readline-sync 라이브러리
-    * keyIn : ( Yes / No ) 를 입력받아야할 때 사용
-    * 이외에도 email, phoneNumber 등 사용자의 입력을 비동기로 처리하고 싶을 때 유용한 방법이 많다.
-2. this 는 가리키는 것이 많다. 잘 파악할 줄 알아야 할 듯
-
-1. Array Method
-    * map : 배열의 각 원소별로 지정된 함수를 실행된 결과로 구성된 새로운 배열을 반환한다.
-    * filter : 지정된 함수의 결과 값을 true로 만드는 원소들로만 구성된 별도의 배열을 반환한다.
-2. return vs break
-    * return : 함수 실행 종료하고 함수를 빠져 나온다.
-    * break : 현재 루프를 종료하고 루프에서 빠져 나온다.
-
-## Typescript
-1. Enum
-2. this로 자기자신을 참조하는 방법
-3. readonly
-4. 타입을 엄격하게 선언해주는편이 좋은게 아닌가 하는 생각 (catch의 e에 any 타입 명시)
-5. as 문법 : 타입 표명 (Type Assertion) 이라고 한다. 프로그래머가 컴파일러에게 이 타입이라고 명시해주는 것. 되도록 사용이 권장되지는 않는다. 선언해준다고해서 타입이 반드시 보장되지 않는다. typeof, instanceof 등으로 타입가드를 해줄 수도 있다.
-6. null vs undefined
-    * 둘 다 값이 '없는 상태'를 말한다.
-    * null 은 null 타입이라고 명시해주는 것.
-    * undefined 는 타입도 명확하지 않은 상태.
-1. in 연산자 narrowing (타입가드)
-    * 타입을 추론할 수 있다.
-    
 ## Git
 > * [markdown 기본 문법](/Git/markdownBasic.md)
 > * 커밋(Commit) **신중하게** 의미있는것만! 설명 꼭 달아서!!
 
-## :egg: 완성되면 >>> :fried_egg: 로 나간다
-* [ ] 백준 문제 풀이 100
-* [ ] 내가 만들고 싶은 앱, 웹
 * https://brunch.co.kr/@cg4jins
 
 ## TDD / Test code implementation
@@ -100,17 +51,6 @@
     * 한국은 아직까지도 자바가 메인.
     * 테스트가 용이하며 변화에 열려있는 아키텍처를 구성하는게 중요.
     * 어플리케이션의 세부 구성부분들을 잘 나누어 유지보수가 용이하게 하는것이 중요.
-
-## Book
-- [x] 프로그래머의 길 멘토에게 묻다
-- [ ] 커리어 스킬
-- [ ] 객체지향의 사실과 오해
-- [ ] 클린 코드(Clean code)
-- [ ] 모던 자바스크립트 Deep Dive
-- [x] 비전공자를 위한 이해할 수 있는 IT 지식
-- [ ] 누워서 읽는 알고리즘
-- [ ] 자바로 배우는 쉬운 자료구조
-- [ ] 테스트 주도 개발
 
 ## Site
 - [도로락님] (https://dololak.tistory.com/)
